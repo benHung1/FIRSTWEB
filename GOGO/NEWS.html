@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>NEWS</title>
+    <style >
+
+    @font-face {
+        font-family: "Abel";
+        src: local("Abel-Regular.ttf"),
+            url("Abel-Regular.woff"),
+            url("Abel-Regular.woff2");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+
+        body {
+            /* border:1px solid red; */
+            background-color: black;
+            font-family: 'Abel';
+            margin: 0 auto;
+            box-sizing: border-box;
+            width:1200px;
+        }
+
+        nav.nav {
+            /* border:1px solid red; */
+            display: flex;
+            justify-content: center;
+            position: relative;
+            margin: 0 auto;
+            z-index: 2;
+            width: 1200px;
+            padding-bottom: 50px;
+        }
+
+        ul.list {
+            /* border:1px solid pink; */
+            list-style: none;
+            justify-content: center;
+            display: flex;
+            padding: 10px;
+            margin: 0 auto;
+            background-color: black;
+        }
+
+        li>a {
+            /* border:1px solid blue; */
+            margin-right: 40px;
+            color: yellow;
+            font-size: 1.2rem;
+            text-decoration: none;
+            padding: 10px;
+            vertical-align: middle;
+        }
+
+        li>a>img {
+            width: 60px;
+            /* border:1px solid blue; */
+            vertical-align: middle;
+        }
+
+
+        div.title {
+            position: absolute;
+            display: inline;
+            /* border:1px solid pink; */
+            color: yellow;
+            margin-top: 40%;
+            font-size: 1.5rem;
+            margin-left: 5%;
+            width: 1200px;
+            text-align: center;
+        }
+
+
+        div.container {
+            /* border:1px solid red; */
+            display: flex;
+            justify-content: center;
+            flex-flow: wrap;
+            width: 1200px;
+            margin: 0 auto;
+            padding-top: 50px;
+        }
+
+
+        a img.show {
+            /* border:1px solid green; */
+            border-radius: 10px;
+            max-width: 250px;
+            max-height: 160px;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        div.pp1 a {
+            text-decoration: none;
+        }
+
+        div.pp1{
+            width:270px;
+        }
+
+        div.pp1 a h1.c1 {
+            /* border:1px solid green; */
+            width:250px;
+            padding: 10px;
+            color: white;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            vertical-align: middle;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        div.pp1 p {
+            /* border:1px solid green; */
+            padding-left: 20px;
+            color: gray;
+            display: flex;
+            justify-content: center;
+            font-size: 14px;
+            width:250px;
+        }
+
+        div.pack {
+            /* border:1px solid blue; */
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: 0 auto;
+            /* overflow: hidden; */
+            width: 1200px;
+            /* padding: 20px; */
+        }
+
+        div.package2 img {
+            border-radius: 50%;
+            max-width: 350px;
+        }
+
+        div.package2 a {
+            text-decoration: none;
+        }
+
+
+        div.package2 a h1 {
+            color: white;
+            font-size: 22px;
+            vertical-align: middle;
+            width: 350px;
+            color: white;
+            /* border:1px solid pink; */
+        }
+
+        div.package2 p {
+            width: 350px;
+            color: white;
+            /* border:1px solid pink; */
+            word-break: break-all;
+        }
+
+        div.package3 {
+            /* border:1px solid pink; */
+            margin-left: auto;
+            margin-top: 10%;
+            margin-left: 5%;
+        }
+
+        div.package3 img {
+            border-radius: 50%;
+            max-width: 350px;
+        }
+
+        div.package3 a {
+            text-decoration: none;
+        }
+
+
+        div.package3 a h1 {
+            color: white;
+            font-size: 22px;
+            vertical-align: middle;
+            width:350px;
+
+        }
+
+        div.package3 p {
+            width: 350px;
+            color: white;
+            /* border:1px solid pink; */
+            word-break: break-all;
+        }
+
+
+        div.title1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* border:1px solid pink; */
+            color: yellow;
+            font-size: 1.5rem;
+            margin-top: 50px;
+            margin: 0 auto;
+            width: 1200px;
+            padding-top: 50px;
+        }
+
+
+        div.bt {
+            /* border:1px solid blue; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 1200px;
+            margin: 0 auto;
+            padding-top: 50px;
+            /* padding:20px; */
+            /* padding-bottom:80px; */
+        }
+
+        div.bt #bt1 {
+            font-size: 20px;
+            padding: 20px;
+            list-style: none;
+            border: 1px solid black;
+            cursor: pointer;
+            background-color: white;
+        }
+
+        div.bt #bt1:hover {
+            background-color: orange;
+            /* transform: scale(1.2); */
+        }
+
+        p.fin {
+            color: lightgray;
+            /* border:1px solid blue; */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 1200px;
+            /* margin:0 auto; */
+            margin-top: 100px;
+        }
+
+        p.lilili {
+            margin-top: 30px;
+            border: 2px solid gray;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 1200px;
+            /* margin:0 auto; */
+        }
+
+        p.si {
+            padding: 10px;
+            color: pink;
+        }
+
+    </style>
+
+</head>
+
+    <body>
+
+        <nav class="nav">
+            <ul class="list">
+                <li>
+                    <a class="log" href="file:///C:/Users/%E6%B4%AA%E9%88%BA%E5%A0%82/Desktop/html%20code/FIRSTWEB/GOGO/index.html#"target="_blank">
+                        <img class="logo" src="../pic/cc.jpg" alt="error">
+                    </a>
+                    <a href="file:///C:/Users/%E6%B4%AA%E9%88%BA%E5%A0%82/Desktop/html%20code/FIRSTWEB/GOGO/NEWS.html"style="color:orange;">News</a>
+                    <a href="file:///C:/Users/%E6%B4%AA%E9%88%BA%E5%A0%82/Desktop/html%20code/FIRSTWEB/GOGO/ABOUT.html" >About</a>
+                    <a href="file:///C:/Users/%E6%B4%AA%E9%88%BA%E5%A0%82/Desktop/html%20code/FIRSTWEB/GOGO/EXPERIENCE.html#">Experience</a>
+                    <a href="file:///C:/Users/%E6%B4%AA%E9%88%BA%E5%A0%82/Desktop/html%20code/FIRSTWEB/GOGO/EXPLORE.html#">Explore</a>
+                    <a href="file:///C:/Users/%E6%B4%AA%E9%88%BA%E5%A0%82/Desktop/html%20code/FIRSTWEB/GOGO/EXHIBITION.html#">Exhibition</a>
+                    <a href="file:///C:/Users/%E6%B4%AA%E9%88%BA%E5%A0%82/Desktop/html%20code/FIRSTWEB/GOGO/index.html">Access</a>
+                </li>
+            </ul>
+            <div class="title">
+                <h1 class="t1">All Eyes On</h1>
+            </div>
+        </nav>
+
+        <img src="https://m.media-amazon.com/images/M/MV5BYTAxZDI4YjEtYWMyNC00ZmExLTg0NjMtMGEzMDM3MGEzYzNiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1280_.jpg" alt="" style="width:1200px; height:500px; display: block; margin:0 auto;  ">
+
+
+        <div class="container">
+
+
+            <div class="package1" style="margin-left:-10%;">
+                <a href="#">
+                    <img class="show" src="https://m.media-amazon.com/images/M/MV5BOWIwMTBmNDgtOWFhYy00YjNhLTk0ZjctMzk2ZjgxYmMwYTRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1280_.jpg" alt="">
+                </a>
+            </div>
+            <div class="pp1">
+                <a href="#">
+                    <h1 class="c1">AI system may diagnose dementia in a day</h1>
+                </a>
+                <p>2023.1.14</p>
+            </div>
+
+            <div class="package1">
+                <a href="#">
+                    <img class="show" src="https://m.media-amazon.com/images/M/MV5BNzFjZjdiNmYtNjQ4MC00NzIzLTg2ZjMtMjdmNGQyMzJkZjFmXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1280_.jpg" alt="">
+                </a>
+            </div>
+            <div class="pp1">
+                <a href="#">
+                    <h1 class="c1">MP wants AI 'nudifying' tool banned</h1>
+                </a>
+                <p>2023.3.7</p>
+            </div>
+
+            <div class="package1"  style="margin-left:0%;">
+                <a href="#">
+                    <img style=""class="show" src="https://m.media-amazon.com/images/M/MV5BMjg3OGE0N2ItYzkzNi00N2VkLWE0YWItZmVmY2EyNDBjOTE2XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1280_.jpg" alt="">
+                </a>
+            </div>
+            <div class="pp1">
+                <a href="#">
+                    <h1 class="c1">Should we trust big tech with our data</h1>
+                </a>
+                <p>2023.4.10</p>
+            </div>
+
+            <div class="package1">
+                <a href="#">
+                    <img class="show" src="https://m.media-amazon.com/images/M/MV5BOGU0ZjBmOTItMzMwYS00NjgwLWEzYjAtYWM0NWQ0YTRhZGUxXkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_FMjpg_UX1280_.jpg" alt="">
+                </a>
+            </div>
+            <div class="pp1">
+                <a href="#">
+                    <h1 class="c1">Google boss warns of threats to free internet</h1>
+                </a>
+                <p>2023.6.24</p>
+            </div>
+
+            <div class="package1"style="margin-left:10%;" >
+                <a href="#">
+                    <img class="show" src="https://m.media-amazon.com/images/M/MV5BODY1NjZmMjgtYjdiMi00MzI2LWI5MGUtMGFhMzE3N2E1MmFmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1280_.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="pp1">
+                <a href="#">
+                    <h1 class="c1">Eyes of a machine: How to Planet Earth</h1>
+                </a>
+                <p>2023.8.20</p>
+            </div>
+
+            <div class="package1">
+                <a href="#">
+                    <img class="show" src="https://m.media-amazon.com/images/M/MV5BYWZjOTY3MGUtMDI4OS00MzYwLWFhMGEtNjE0Nzc3N2MxOTljXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1280_.jpg" alt="">
+                </a>
+            </div>
+            <div class="pp1">
+                <a href="#">
+                    <h1 class="c1">DeepMind uses AI to tackle deadly diseases</h1>
+                </a>
+                <p>2023.10.21</p>
+            </div>
+
+
+
+        </div>
+
+
+        <div class="title1">
+            <h1 class="t2">Popular</h1>
+        </div>
+
+        <div class="pack">
+
+            <div class="package2">
+                <a href="#">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNzU4YzVmNDQtYTdlNS00MWUzLThkYTYtOWI4N2IwMmM1MzdkXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1280_.jpg" alt="">
+                    <h1>BOOSTFLAGGING AWARD SHOW RATINGS</h1>
+                </a>
+                <p>We believe that innovation starts with giving the best people the freedom to take wild swings. There is no box.Learn more about career opportunities at our corporate offices and at our various park locations.</p>
+            </div>
+
+            <div class="package3">
+                <a href="#">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZTllZDA2ODktODNmYi00YjIwLWEyYzQtZGIwOTI4NzY5OWNiXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1280_.jpg" alt="">
+                    <h1>NICKELODEON DROPS THE SMURFS </h1>
+                </a>
+                <p>the upcoming production book The Art and Soul of Dune is so huge in its own right that it’s even getting its own accompanying soundtrack from Dune.We’re always looking for passionate and driven people interested in building better
+                    worlds.</p>
+
+            </div>
+
+        </div>
+
+        <div class="bt">
+            <button id="bt1" type="button" name="button">Read More</button>
+        </div>
+
+        <p class="fin">AN INCITE COMPANY ™© <br> INCTERMS OF USEPRIVACY POLICY | DO NOT SELL MY PERSONAL INFORMATION</p>
+        <p class="lilili"></p>
+
+        <p class="si">This website is the 69th special work of the students of the TibaMe front-end design engineer class of Weiyu TibaMe. This platform is for learning and display purposes only. If you have concerns about infringement, you can send a
+            private message to [TibaMe-Front-end Design Engineer Training Class], and the follow-up will be handled by a dedicated person.</p>
+
+    </body>
+
+</html>

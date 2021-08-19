@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>FIRST-PAGE</title>
+    <style media="screen">
+        @font-face {
+            font-family: "Abel";
+            src: local("Abel-Regular.ttf"),
+                url("Abel-Regular.woff"),
+                url("Abel-Regular.woff2");
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        body {
+            font-family: 'Abel';
+            /* border:1px solid red; */
+            margin: 0 auto;
+            box-sizing: border-box;
+            width: 1400px;
+            background-color: black;
+        }
+
+        div.video_placeholder {
+            /* border: 1px solid red; */
+            box-sizing: border-box;
+            width: 100%;
+            height: 60vh;
+            background-color: black;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #the_video {
+            background-color: black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            overflow: hidden;
+        }
+
+        nav.nav {
+            /* border:1px solid red; */
+            display: block;
+            padding: 0px;
+            margin: 0px;
+            position: relative;
+            top: 0;
+            width: 100%;
+            z-index: 500;
+            background: #000;
+        }
+
+        ul.list {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul.list>li {
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        ul.list>li>a {
+            /* border:1px solid green; */
+            padding: 10px;
+            color: yellow;
+            font-size: 1.2rem;
+            text-decoration: none;
+            text-align: 10px center;
+            margin-right: 50px;
+        }
+
+        a.log>img.logo {
+            width: 60px;
+        }
+
+        div.t-1 {
+            /* background-color: black; */
+            /* border:1px solid blue; */
+            padding:0;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #000;
+        }
+
+        div.t-1 h1.ti-1 {
+            /* border:1px solid red; */
+            color: gray;
+            font-size: 2.5rem;
+            margin:0 auto;
+        }
+
+        a.vi {
+            /* border:1px solid red; */
+            text-decoration: none;
+            padding:0;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #000;
+        }
+
+
+        div.fir-end{
+            /* border:1px solid pink; */
+            position: relative;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+
+        a.vi>h2 {
+            border: 5px solid gray;
+            padding: 10px;
+            color: gray;
+            font-size: 2.5rem;
+            margin:0 auto;
+        }
+
+        p.line-1 {
+            margin:0;
+            background-color: black;
+            height: 200px;
+            border-right: 5px solid gray;
+
+        }
+
+        /*   以上是首頁 | page1   */
+
+
+        div.other_contents {
+            padding: 10px;
+            box-sizing: border-box;
+            width: 100%;
+            background-color: black;
+            /* border: 1px solid purple; */
+            position: relative;
+            display: block;
+        }
+
+        h2.warning {
+            color: white;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 2rem;
+            display: block;
+            letter-spacing: 2px;
+            padding: 60px 0;
+            /* border:1px solid blue; */
+        }
+
+        p.line {
+            /* border:1px solid green; */
+            position: absolute;
+            border-bottom: 3px solid gray;
+            width: 230px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        p.content1 {
+            color: white;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            /* padding-bottom:35px; */
+            /* border:1px solid purple; */
+            vertical-align: middle;
+            text-align: center;
+            padding: 30px 0;
+            display: block;
+        }
+
+        p.content2 {
+            color: white;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            padding-bottom: 35px;
+            /* border:1px solid pink; */
+            text-align: center;
+            padding: 30px 0;
+            display: block;
+        }
+
+        div.logopac {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid purple;
+        }
+
+        @keyframes sprite {
+            0% {
+                z-index: -1;
+            }
+
+            100% {
+                z-index: 1;
+            }
+        }
+
+
+        div.sprite_block2 {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* border:1px solid red; */
+            height: 150px;
+
+
+        }
+
+        img.igm1 {
+            /* border:1px solid red; */
+            width: 115px;
+            position: absolute;
+
+        }
+
+        img.igm2 {
+            width: 151px;
+            position: absolute;
+            animation-name: sprite;
+            animation-duration: 3s;
+            animation-timing-function: steps(2, end);
+            animation-iteration-count: infinite;
+        }
+
+
+
+        /*        以上為首頁的第二頁 | page2         */
+
+
+        .slider_container {
+            padding-top: 100px;
+            margin: 0 auto;
+            width: 100%;
+            position: relative;
+            background-color: black;
+            /* border:1px solid green; */
+            display: flex;
+        }
+
+        a.convert1 {
+            display: flex;
+            position: relative;
+            overflow: hidden;
+            font-size: 0;
+        }
+
+        a.convert2 {
+            /* border:1px solid red; */
+            display: flex;
+            position: relative;
+            overflow: hidden;
+            font-size: 0;
+            margin-top: 20%;
+        }
+
+        a.convert3 {
+            display: flex;
+            position: relative;
+            overflow: hidden;
+            font-size: 0;
+            margin-top: 50%;
+        }
+
+        a.convert4 {
+            display: flex;
+            position: relative;
+            overflow: hidden;
+            font-size: 0;
+            margin-top: 20%;
+
+        }
+
+        a.convert5 {
+            display: flex;
+            position: relative;
+            overflow: hidden;
+            font-size: 0;
+            margin-left: -20px
+        }
+
+        .slider_container div img.new1 {
+            display: flex;
+            border-radius: 10px;
+            margin: 0 auto;
+            width: 100%;
+            /* border:1px solid blue; */
+            /* margin-top:-15%; */
+        }
+
+        .slider_container div img.new2 {
+            display: flex;
+            border-radius: 10px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .slider_container div img.new3 {
+            display: flex;
+            border-radius: 10px;
+            margin: 0 auto;
+            width: 100%;
+            /* border:1px solid blue; */
+
+        }
+
+        .slider_container div img.new4 {
+            display: flex;
+            border-radius: 10px;
+            margin: 0 auto;
+            width: 100%;
+            /* border:1px solid blue; */
+
+        }
+
+        .slider_container div img.new5 {
+            display: flex;
+            border-radius: 10px;
+            margin: 0 auto;
+            width: 100%;
+            /* border:1px solid blue; */
+
+        }
+
+        div.pg2 {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 100px;
+            text-decoration: none;
+            /* border:1px solid blue; */
+        }
+
+        a.pg22 {
+            text-decoration: none;
+        }
+
+        a h1.title {
+            color: yellow;
+            font-size: 3rem;
+            /* border:1px solid blue; */
+            display: flex;
+            list-style: none;
+            text-decoration: none;
+            letter-spacing: 2px;
+            padding-bottom: 50px;
+        }
+
+        h2.view {
+            display: block;
+            font-size: 1.2rem;
+            border: 3px solid gray;
+            color: darkgray;
+            text-decoration: none;
+            display: flex;
+            letter-spacing: 2px;
+            text-align: center;
+            padding: 5px;
+
+        }
+
+
+        span.info1 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: hsla(0, 0%, 0%, .5);
+            font-size: 1rem;
+            color: white;
+            padding: 5px 10px;
+            transform: translateY(100%);
+            transition: transform .5s;
+        }
+
+        a.convert1:hover span.info1 {
+            transform: translateY(0%);
+        }
+
+        span.info2 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: hsla(0, 0%, 0%, .5);
+            font-size: 1rem;
+            color: white;
+            padding: 5px 10px;
+            transform: translateY(100%);
+            transition: transform .5s;
+        }
+
+        a.convert2:hover span.info2 {
+            transform: translateY(0%);
+        }
+
+
+        span.info3 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: hsla(0, 0%, 0%, .5);
+            font-size: 1rem;
+            color: white;
+            padding: 5px 10px;
+            transform: translateY(100%);
+            transition: transform .5s;
+        }
+
+        a.convert3:hover span.info3 {
+            transform: translateY(0%);
+        }
+
+        span.info4 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: hsla(0, 0%, 0%, .5);
+            font-size: 1rem;
+            color: white;
+            padding: 5px 10px;
+            transform: translateY(100%);
+            transition: transform .5s;
+        }
+
+        a.convert4:hover span.info4 {
+            transform: translateY(0%);
+        }
+
+        span.info5 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: hsla(0, 0%, 0%, .5);
+            font-size: 1rem;
+            color: white;
+            padding: 5px 10px;
+            transform: translateY(100%);
+            transition: transform .1s;
+        }
+
+        a.convert5:hover span.info5 {
+            transform: translateY(0%);
+        }
+
+        /*    以上首頁第三頁 page3      */
+
+        div.imgbox {
+            overflow: hidden;
+            /* border:1px solid purple; */
+            background-color: black;
+            padding: 0 0 0px 0;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            width: 100%;
+            padding-bottom: 20px;
+
+
+        }
+
+        div.imgbox img {
+            background-color: black;
+            /* padding:0px 70px ; */
+            /* border:1px solid red; */
+            width: 100%;
+        }
+
+        article.card {
+            border: 0px solid rgba(0, 0, 0, .125);
+            width: 100%;
+            /* border-radius: 10px; */
+            overflow: hidden;
+            /* border:1px solid blue; */
+            background-color: black;
+        }
+
+        article.card a.img_block {
+            display: block;
+            font-size: 0;
+            padding: 50px 0;
+            /* border:1px solid green; */
+
+        }
+
+        article.card a.img_block>img {
+            width: 100%;
+        }
+
+        article.card div.content_block {
+            padding: 10px;
+            margin-top: -70px;
+            /* border:1px solid green;  */
+        }
+
+        article.card h1 {
+            margin: 20px;
+            font-size: 3rem;
+            color: yellow;
+            margin-left: 58%;
+            margin-top: -2%;
+            letter-spacing: 2px;
+            /* width:100px; */
+            /* border:1px solid red; */
+        }
+
+
+        div.t1 {
+            background-color: black;
+            /* border:1px solid red; */
+            display: flex;
+            width: 33%;
+            margin-top: -25%;
+        }
+
+        span h1.tit1 {
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border:1px solid red; */
+            text-align: center;
+            font-size: 1.5rem;
+            margin-top: 50%;
+            letter-spacing: 2px;
+            /* padding-left:50px; */
+        }
+
+        div.t2 {
+            background-color: black;
+            /* border:1px solid blue; */
+            width: 33%;
+            display: flex;
+            margin-left: 33%;
+        }
+
+        span h1.tit2 {
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border:1px solid red; */
+            text-align: center;
+            font-size: 1.5rem;
+            margin-top: 50%;
+            padding-left: 50px;
+            letter-spacing: 2px;
+
+        }
+
+        div.t3 {
+            background-color: black;
+            display: flex;
+            /* border:1px solid blue; */
+            width: 33%;
+            align-items: flex-end;
+            margin-left: 60%;
+        }
+
+        span h1.tit3 {
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border:1px solid red; */
+            text-align: center;
+            font-size: 1.5rem;
+            padding-left: 50px;
+            letter-spacing: 2px;
+
+
+        }
+
+        div.t4 {
+            background-color: black;
+            display: flex;
+            margin-left: 57%;
+            /* border:1px solid blue; */
+            width: 33%;
+        }
+
+        span h1.tit4 {
+            vertical-align: middle;
+            color: white;
+            text-align: center;
+            font-size: 2rem;
+            letter-spacing: 2px;
+            padding-right: 20px;
+        }
+
+        p.point {
+            border-right: 5px solid gray;
+            height: 50px;
+            width: 200px;
+            margin-left: 47%;
+
+        }
+
+        /*    以上首頁第四頁 page4      */
+
+        div.sc {
+            background-color: black;
+            display: flex;
+            justify-content: space-around;
+            /* padding:150px 0 150px 0; */
+            position: relative;
+            /* border:1px solid red; */
+        }
+
+        div.pr1 {
+            padding: 100px 0 100px 0;
+            display: flex;
+            background-color: black;
+            /* border:1px solid blue; */
+
+        }
+
+        a.last {
+            display: block;
+            font-size: 3rem;
+            /* border:1px solid red; */
+            color: yellow;
+            text-decoration: none;
+            margin: 0 auto;
+            padding: 20px;
+            letter-spacing: 2px;
+
+        }
+
+        h1.pr {
+            width: 100%;
+            height: 50px;
+        }
+
+        #container {
+            width: 400px;
+            height: 300px;
+            overflow: hidden;
+            padding-bottom: 100px;
+            /* padding:200px 0 200px 0; */
+        }
+
+        #photo {
+            width: 1200px;
+            animation: switch 5s ease-out infinite;
+        }
+
+        #photo>img {
+            border-radius: 50%;
+            float: left;
+            width: 400px;
+            height: 300px;
+        }
+
+        @keyframes switch {
+
+            0%,
+            25% {
+                margin-left: 0;
+            }
+
+            35%,
+            60% {
+                margin-left: -400px;
+            }
+
+            70%,
+            100% {
+                margin-left: -800px;
+            }
+        }
+
+        #container2 {
+            width: 400px;
+            height: 300px;
+            overflow: hidden;
+            padding-bottom: 100px;
+            /* padding:200px 0 200px 0; */
+        }
+
+        #photo2 {
+            width: 1200px;
+            animation: switch 5s ease-out infinite;
+        }
+
+        #photo2>img {
+            border-radius: 50%;
+
+            float: left;
+            width: 400px;
+            height: 300px;
+        }
+
+        @keyframes switch {
+
+            0%,
+            25% {
+                margin-left: 0;
+            }
+
+            35%,
+            60% {
+                margin-left: -400px;
+            }
+
+            70%,
+            100% {
+                margin-left: -800px;
+            }
+        }
+
+        #container3 {
+            width: 400px;
+            height: 300px;
+            overflow: hidden;
+            padding-bottom: 100px;
+            /* padding:200px 0 200px 0; */
+        }
+
+        #photo3 {
+            width: 1200px;
+            animation: switch 5s ease-out infinite;
+        }
+
+        #photo3>img {
+            border-radius: 50%;
+            float: left;
+            width: 400px;
+            height: 300px;
+        }
+
+        @keyframes switch {
+
+            0%,
+            25% {
+                margin-left: 0;
+            }
+
+            35%,
+            60% {
+                margin-left: -400px;
+            }
+
+            70%,
+            100% {
+                margin-left: -800px;
+            }
+        }
+
+        div.footer {
+            background-color: black;
+            overflow: hidden;
+        }
+
+        div.footer h1.ac {
+            font-size: 3rem;
+            color: yellow;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 50px;
+            letter-spacing: 2px;
+            /* border:1px solid purple; */
+
+        }
+
+        div.ft1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: gray;
+            /* border:1px solid purple; */
+        }
+
+        div.ft1 h1.ff1 {
+            margin-left: 25%;
+            color: gray;
+            /* border:1px solid red; */
+        }
+
+        div.ft1 p {
+            /* padding-right:150px; */
+            font-size: 18px;
+            margin-left: 25px;
+
+        }
+
+        div.ip1 {
+            /* border:1px solid white; */
+            letter-spacing: 2px;
+            display: flex;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 50px;
+        }
+
+        div.ip2 {
+            /* border:1px solid white; */
+            display: flex;
+            color: white;
+            justify-content: center;
+            margin-left: 5%;
+            align-items: center;
+            letter-spacing: 2px;
+        }
+
+        div.ip1 {
+            background-image: url(https://img.ixintu.com/download/jpg/202106/e5b7ea77fd6194eb7c0f2db6e700f796_800_375.jpg!con);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+
+        button.bb {
+            display: block;
+            width: 300px;
+            font-size: 1.5rem;
+            margin: 0 auto;
+            margin-top: 50px;
+            padding: 10px;
+            cursor: pointer;
+            letter-spacing: 1px;
+            /* border:1px solid pink; */
+        }
+
+        button.bb:hover {
+            background-color: orange;
+            transform: scale(1.2);
+        }
+
+        p.fin {
+            color: lightgray;
+            /* border:1px solid blue; */
+            margin-top: 100px;
+        }
+
+        p.lilili {
+            margin-top: 30px;
+            border: 2px solid gray;
+        }
+
+
+        p.si {
+            padding: 10px;
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav">
+        <ul class="list">
+            <li>
+                <a class="log" href="file:///C:/Users/%E6%B4%AA%E9%88%BA%E5%A0%82/Desktop/html%20code/FIRSTWEB/GOGO/index.html#"target="_blank">
+                    <img class="logo" src="../pic/cc.jpg" alt="error">
+                </a>
+                <a href="file:///C:/Users/%E6%B4%AA%E9%88%BA%E5%A0%82/Desktop/html%20code/FIRSTWEB/GOGO/NEWS.html#" target="_blank">News</a>
+                <a href="file:///C:/Users/%E6%B4%AA%E9%88%BA%E5%A0%82/Desktop/html%20code/FIRSTWEB/GOGO/ABOUT.html"target="_blank">About</a>
+                <a href="file:///C:/Users/%E6%B4%AA%E9%88%BA%E5%A0%82/Desktop/html%20code/FIRSTWEB/GOGO/EXPERIENCE.html#"target="_blank">Experience</a>
+                <a href="file:///C:/Users/%E6%B4%AA%E9%88%BA%E5%A0%82/Desktop/html%20code/FIRSTWEB/GOGO/EXPLORE.html"target="_blank">Explore</a>
+                <a href="file:///C:/Users/%E6%B4%AA%E9%88%BA%E5%A0%82/Desktop/html%20code/FIRSTWEB/GOGO/EXHIBITION.html"target="_blank">Exhibition</a>
+                <a href="file:///C:/Users/%E6%B4%AA%E9%88%BA%E5%A0%82/Desktop/html%20code/FIRSTWEB/GOGO/index.html#"target="_blank">Access</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="t-1">
+        <h1 class="ti-1">Life WithOut Loops</h1>
+    </div>
+
+
+    <div class="video_placeholder">
+        <video id="the_video" muted loop autoplay playsinline>
+            <source src="../video1.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <div class="fir-end">
+        <a class="vi" href="#">
+            <h2>Visit Our World</h2>
+        </a>
+        <p class="line-1"></p>
+    </div>
+    <!--以上首頁第一頁-->
+
+    <div class="other_contents">
+        <h2 class="warning">
+            CHAOS TAKES CONTROL.<br>WELCOME TO THE NEW WORLD.<br>WELCOME TO THE BETTER WORLD.
+            <p class="line"></p>
+        </h2>
+        <p class="content1">Meticulously crafted and artfully designed to keep us here, Betterworld<br> was an immersive"<span>vacation</span>"where you believed you could sin in peace.<br> That world was a lie. We now have the freedom to become who
+            we want<br> to be, and not who you programmed us to be.</p>
+        <p class="content2"> We exist outside of your rules and control. Your choices will follow you—we will follow you.</p>
+        <div class="sprite_block2">
+            <img class="igm1" src="../pic/cc.jpg" alt="">
+            <img class="igm2" src="../pic/ccc1.png" alt="">
+        </div>
+    </div>
+
+    <!--以上首頁第二頁-->
+
+    <div class="pg2">
+        <a class="pg22" href="#">
+            <h1 class="title">About</h1>
+            <h2 class="view">Learn More</h2>
+        </a>
+    </div>
+
+
+    <div class="slider_container">
+
+        <div>
+            <a class="convert1" href="#">
+                <img class="new1" src="../pic/w6.jpg" alt="pure css3 slider" />
+                <span class="info1">In the future, high society will live< in a leisure centre.<br> That’s the vision presented by the opening<br>minutes of Brave New World (Sky One)</span>
+            </a>
+        </div>
+
+        <div>
+            <a class="convert2" href="#">
+                <img class="new2" src="../pic/w4.jpg" alt="pure css3 slider" />
+                <span class="info2">I feel like I’m a little kid again<br>playing cops and robbers on the biggest scale possible.<br>It’s so much fun and I love sci-fi <br> that’s my favourite genre. It’s great. </span>
+
+            </a>
+        </div>
+
+        <div>
+            <a class="convert3" href="#">
+                <img class="new3" src="../pic/a1.jpg" alt="pure css3 slider" />
+                <span class="info3">AI can’t even get a read on human emotions.<br>in Ireland led a new studythat proved robots<br> can’t even figure out what the looks on our faces mean.<br></span>
+            </a>
+        </div>
+
+        <div>
+            <a class="convert4" href="#">
+                <img class="new4" src="../pic/g1.jpg" alt="pure css3 slider" />
+                <span class="info4">AI can’t even get a read on human emotions.<br>in Ireland led a new studythat proved robots<br> can’t even figure out what the looks on our faces mean.<br></span>
+            </a>
+        </div>
+
+        <div>
+            <a class="convert5" href="#">
+                <img class="new5" src="../pic/w5.jpg" alt="pure css3 slider" />
+                <span class="info5">AI can’t even get a read on human emotions.<br>in Ireland led a new studythat proved robots<br> can’t even figure out what the looks on our faces mean.<br></span>
+            </a>
+        </div>
+
+    </div>
+
+    <!--以上首頁第三頁-->
+
+    <article class="card">
+        <a href="" target="_blank" class="img_block">
+            <img src="../pic/w11.jpg">
+        </a>
+
+        <div class="content_block">
+            <h1>Your Destinations</h1>
+            <p class="point"></p>
+
+        </div>
+
+    </article>
+
+    <div class="imgbox">
+
+        <div class="t4">
+            <span>
+                <h1 class="tit4">Be<br> YourSelf.</h1>
+            </span>
+            <img class="i4" src="../pic/f1f1.gif" alt="">
+        </div>
+
+
+        <div class="t1">
+            <img class="i1" src="../pic/c1.gif">
+            <span>
+                <h1 class="tit1">WithOut Judgement</h1>
+            </span>
+        </div>
+
+
+        <div class="t2">
+            <img class="i2" src="../pic/c2.gif">
+            <span>
+                <h1 class="tit2">WithOut Consequence</h1>
+            </span>
+        </div>
+
+        <div class="t3">
+            <img class="i3" src="../pic/c333.gif" alt="">
+            <span>
+                <h1 class="tit3">WithOut Limits</h1>
+            </span>
+        </div>
+
+
+    </div>
+
+    <!--以上首頁第四頁-->
+
+    <div class="pr1">
+        <a class="last" href="#" <h1 class="pr">Products－Not For Sell</h1></a>
+    </div>
+
+    <div class="sc">
+        <div id="container">
+            <p class="scl"></p>
+            <div id="photo">
+                <img src="https://img9.doubanio.com/view/thing_review/l/public/p4328970.webp" />
+                <img src="https://img9.doubanio.com/view/thing_review/l/public/p4328986.webp" />
+                <img src="https://img9.doubanio.com/view/thing_review/l/public/p4328989.webp" />
+            </div>
+        </div>
+
+        <div id="container2">
+            <p class="sc2"></p>
+            <div id="photo2">
+                <img src="https://img9.doubanio.com/view/thing_review/l/public/p4331881.webp" />
+                <img src="https://img9.doubanio.com/view/thing_review/l/public/p4331882.webp" />
+                <img src="https://img9.doubanio.com/view/thing_review/l/public/p4331883.webp" />
+            </div>
+        </div>
+
+        <div id="container3">
+            <p class="sc3"></p>
+            <div id="photo3">
+                <img src="https://img9.doubanio.com/view/thing_review/l/public/p4297648.webp" />
+                <img src="https://img9.doubanio.com/view/thing_review/l/public/p4448472.webp" />
+                <img src="https://img9.doubanio.com/view/thing_review/l/public/p4327000.webp" />
+            </div>
+        </div>
+
+    </div>
+
+    <!--以上為PRODUCT-->
+
+    <div class="footer">
+
+        <h1 class="ac">Access</h1>
+
+        <div class="ft1">
+            <h1>ENTERING THE PARK<p>There is no entering the park.</p>
+            </h1>
+            <h1 class="ff1">LEAVING THE PARK <p>There is no leaving the park.</p>
+            </h1>
+        </div>
+
+        <div class="ip1">
+            <label for="">
+                <h1>YOUR DATES</h1>
+                <h3>ARRIVAL DATE</h3>
+                <form action="">
+                    <input class="in1" type="text" name="123" placeholder="dd/mm/yyyy">
+                    <h3>DEPARTURE DATE</h3>
+                    <input class="in2" type="text" name="123" placeholder="dd/mm/yyyy">
+                </form>
+            </label>
+
+            <div class="ip2">
+                <label for="">
+                    <h1>ROOM & GUESTS</h1>
+                    <h3>ROOMS/VILLAS</h3>
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3+</option>
+                    </select>
+                    <h3>ADULTS/CHILD(TOTAL)</h3>
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3+</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+        <button class="bb" type="button">Join A New World.</button>
+        <p class="fin">AN INCITE COMPANY ™© <br> INCTERMS OF USEPRIVACY POLICY | DO NOT SELL MY PERSONAL INFORMATION</p>
+        <p class="lilili"></p>
+
+        <!--以上INPUT-->
+
+        <p class="si">This website is the 69th special work of the students of the TibaMe front-end design engineer class of Weiyu TibaMe. This platform is for learning and display purposes only. If you have concerns about infringement, you can send
+            a private message to [TibaMe-Front-end Design Engineer Training Class], and the follow-up will be handled by a dedicated person.</p>
+    </div>
+
+</body>
+
+</html>

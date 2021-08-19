@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <title>ABOUT</title>
+        <style media="screen">
+            @font-face {
+                font-family: "Abel";
+                src: local("Abel-Regular.ttf"),
+                    url("Abel-Regular.woff"),
+                    url("Abel-Regular.woff2");
+                font-weight: normal;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            body {
+                /* border:1px solid red; */
+                background-color: black;
+                font-family: 'Abel';
+                margin: 0 auto;
+                width:1200px;
+                box-sizing: border-box;
+            }
+
+            nav.nav {
+                /* border:1px solid red; */
+                display: flex;
+                justify-content: center;
+                position: relative;
+                margin: 0 auto;
+                z-index: 2;
+                width: 1200px;
+            }
+
+            ul.list {
+                /* border:1px solid pink; */
+                list-style: none;
+                justify-content: center;
+                display: flex;
+                padding: 10px;
+                margin: 0 auto;
+                background-color: black;
+            }
+
+            li>a {
+                /* border:1px solid blue; */
+                margin-right: 40px;
+                color: yellow;
+                font-size: 1.2rem;
+                text-decoration: none;
+                padding: 10px;
+                vertical-align: middle;
+            }
+
+            li>a>img {
+                width: 60px;
+                /* border:1px solid blue; */
+                vertical-align: middle;
+            }
+
+            div.middle {
+                /* border:1px solid red; */
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                width:1200px;
+                height:3500px;
+                margin:auto;
+                margin-top:30px;
+            }
+
+            ul.scroll {
+                /* border:1px solid green; */
+                position: relative;
+                width: 1200px;
+                height: 500px;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                background-color: #eee;
+            }
+
+            li.scr {
+                margin: 0;
+                padding: 0;
+                width: inherit;
+                height: inherit;
+                position: absolute;
+
+            }
+
+            .scr:nth-of-type(1) {
+                background-image: url("https://m.media-amazon.com/images/M/MV5BMjExODg2ODQyNl5BMl5BanBnXkFtZTgwOTgwNjcwODM@._V1_FMjpg_UX1280_.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                /* border:1px solid red; */
+            }
+
+            p.line{
+                /* background-image: url("https://m.media-amazon.com/images/M/MV5BNGI0YmIwNGUtMDNiMC00M2ExLTk4MmEtZWEyYmQzNzhlMGIyXkEyXkFqcGdeQXVyMTIwODk1NTQ@._V1_FMjpg_UX1280_.jpg"); */
+                background-repeat: no-repeat;
+                background-size: cover;
+                border:2px solid gray;
+                width:200px;
+                margin-top:-15px;
+            }
+
+            .scr:nth-of-type(2) {
+                background-image: url("https://m.media-amazon.com/images/M/MV5BNGI0YmIwNGUtMDNiMC00M2ExLTk4MmEtZWEyYmQzNzhlMGIyXkEyXkFqcGdeQXVyMTIwODk1NTQ@._V1_FMjpg_UX1280_.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                top: 150%;
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .scr:nth-of-type(3) {
+                background-image: url("https://m.media-amazon.com/images/M/MV5BNTAyNjU4NTAyMl5BMl5BanBnXkFtZTgwMzM5MTkyMzI@._V1_FMjpg_UX1280_.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                top: 300%;
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .scr:nth-of-type(4) {
+                background-image: url("https://m.media-amazon.com/images/M/MV5BMjE1MTI2NTczNl5BMl5BanBnXkFtZTgwMDkyNzYwOTE@._V1_FMjpg_UX1280_.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                top: 450%;
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .scr:nth-of-type(5) {
+                background-image: url("https://m.media-amazon.com/images/M/MV5BMzU2NzA4NzA1Nl5BMl5BanBnXkFtZTgwODkzNDEzMzI@._V1_FMjpg_UX1280_.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                top: 600%;
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            p.fin {
+                color: lightgray;
+                /* border:1px solid blue; */
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                width: 1200px;
+                /* margin:0 auto; */
+                margin-top: 100px;
+            }
+
+            p.lilili {
+                margin-top: 30px;
+                border: 2px solid gray;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                width: 1200px;
+                /* margin:0 auto; */
+            }
+
+            p.si {
+                padding: 10px;
+                color: pink;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <nav class="nav">
+            <ul class="list">
+                <li>
+                    <a class="log" href="file:///C:/Users/%E6%B4%AA%E9%88%BA%E5%A0%82/Desktop/html%20code/FIRSTWEB/GOGO/index.html#"target="_blank">
+                        <img class="logo" src="../pic/cc.jpg" alt="error">
+                    </a>
+                    <a href="file:///C:/Users/%E6%B4%AA%E9%88%BA%E5%A0%82/Desktop/html%20code/FIRSTWEB/GOGO/NEWS.html">News</a>
+                    <a href="file:///C:/Users/%E6%B4%AA%E9%88%BA%E5%A0%82/Desktop/html%20code/FIRSTWEB/GOGO/ABOUT.html" style="color:orange;">About</a>
+                    <a href="file:///C:/Users/%E6%B4%AA%E9%88%BA%E5%A0%82/Desktop/html%20code/FIRSTWEB/GOGO/EXPERIENCE.html#">Experience</a>
+                    <a href="file:///C:/Users/%E6%B4%AA%E9%88%BA%E5%A0%82/Desktop/html%20code/FIRSTWEB/GOGO/EXPLORE.html#">Explore</a>
+                    <a href="file:///C:/Users/%E6%B4%AA%E9%88%BA%E5%A0%82/Desktop/html%20code/FIRSTWEB/GOGO/EXHIBITION.html#">Exhibition</a>
+                    <a href="file:///C:/Users/%E6%B4%AA%E9%88%BA%E5%A0%82/Desktop/html%20code/FIRSTWEB/GOGO/index.html">Access</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="middle">
+
+            <ul class="scroll">
+
+                <li class="scr">
+                    <h1 >NO RESERVATIONS AVAILABLE</h1>
+                    <p class="line"></p>
+                    <p>NO RESERVATIONS AVAILABLE</p>
+                </li>
+                <li class="scr">
+                    <h1>NO RESERVATIONS AVAILABLENO RESERVATIONS AVAILABLE</h1>
+                    <p class="line"></p>
+                    <p>NO RESERVATIONS AVAILABLE</p>
+                </li>
+                <li class="scr">
+                    <h1>NO RESERVATIONS AVAILABLE</h1>
+                    <p class="line"></p>
+                    <p>NO RESERVATIONS AVAILABLE</p>
+                </li>
+                <li class="scr">
+                    <h1>NO RESERVATIONS AVAILABLE</h1>
+                    <p class="line"></p>
+                    <p>NO RESERVATIONS AVAILABLE</p>
+                </li>
+                <li class="scr">
+                    <h1>NO RESERVATIONS AVAILABLE</h1>
+                    <p class="line"></p>
+                    <p>NO RESERVATIONS AVAILABLE</p>
+                </li>
+            </ul>
+        </div>
+
+            <p class="fin">AN INCITE COMPANY ™© <br> INCTERMS OF USEPRIVACY POLICY | DO NOT SELL MY PERSONAL INFORMATION</p>
+            <p class="lilili"></p>
+            <p class="si">This website is the 69th special work of the students of the TibaMe front-end design engineer class of Weiyu TibaMe. This platform is for learning and display purposes only. If you have concerns about infringement, you can send a
+                private message to [TibaMe-Front-end Design Engineer Training Class], and the follow-up will be handled by a dedicated person.</p>
+
+
+
+    </body>
+
+    </html>

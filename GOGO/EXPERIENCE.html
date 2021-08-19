@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Experience</title>
+    <style media="screen">
+        @font-face {
+            font-family: "Abel";
+            src: local("Abel-Regular.ttf"),
+                url("Abel-Regular.woff"),
+                url("Abel-Regular.woff2");
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        body {
+            /* border:1px solid red; */
+            background-color: black;
+            font-family: 'Abel';
+            margin: 0 auto;
+            width:1200px;
+            box-sizing: border-box;
+        }
+        nav.nav {
+            /* border:1px solid red; */
+            display: flex;
+            justify-content: center;
+            position: relative;
+            margin: 0 auto;
+            z-index: 2;
+            width: 1200px;
+        }
+
+        ul.list {
+            /* border:1px solid pink; */
+            list-style: none;
+            justify-content: center;
+            display: flex;
+            padding: 10px;
+            margin: 0 auto;
+            background-color: black;
+        }
+
+        li>a {
+            /* border:1px solid blue; */
+            margin-right: 40px;
+            color: yellow;
+            font-size: 1.2rem;
+            text-decoration: none;
+            padding: 10px;
+            vertical-align: middle;
+        }
+
+        li>a>img {
+            width: 60px;
+            /* border:1px solid blue; */
+            vertical-align: middle;
+        }
+
+        div.top {
+            /* border:1px solid pink; */
+            letter-spacing: 2px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 1200px;
+            margin: 0 auto;
+            /* margin-top:50px; */
+        }
+
+        div.top h1 {
+            font-size: 3rem;
+            padding: 10px;
+            color: yellow;
+            display: flex;
+            flex-direction: column;
+        }
+
+        div.sli {
+            /* margin-top:50px; */
+            /* border:1px solid red; */
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width:1200px;
+        }
+
+        ul.slides {
+            /* border-radius:30px; */
+            position: relative;
+            width: 1200px;
+            height: 750px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background-color: #eee;
+            overflow: hidden;
+        }
+
+        li.slide {
+            /* border:1px solid red; */
+            margin: 0;
+            padding: 0;
+            width: inherit;
+            height: inherit;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Helvetica;
+            font-size: 120px;
+            color: #fff;
+            transition: .5s transform ease-in-out;
+            font-size: 3rem;
+            color: orange;
+
+        }
+
+        li.slide h1{
+            width:800px;
+        }
+
+        .slide:nth-of-type(1) {
+            background-image: url("https://m.media-amazon.com/images/M/MV5BODA5ZmIwOWItYzMxYy00OGMzLWI1Y2ItNTkxYzJmZWY3YzZhXkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_FMjpg_UX1280_.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .slide:nth-of-type(2) {
+            background-image: url("https://m.media-amazon.com/images/M/MV5BOThiYzM0YzQtOTZmOS00NjBlLWE5NjAtNGZlM2EwYzRjNmJkXkEyXkFqcGdeQXVyODc5MTI0NjU@._V1_FMjpg_UX1280_.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            left: 100%;
+        }
+
+        .slide:nth-of-type(3) {
+            background-image: url("https://m.media-amazon.com/images/M/MV5BZGIxODg2MTQtMTZiMy00ZjY5LWEwMWEtMGVhMGRlOTk1YWQ4XkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_FMjpg_UX1280_.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            left: 200%;
+        }
+
+        input[type="radio"] {
+            position: relative;
+            z-index: 100;
+            display: none;
+        }
+
+        .controls-visible {
+            position: absolute;
+            width: 100%;
+            bottom: 12px;
+            text-align: center;
+        }
+
+        .controls-visible label {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            margin: 0 3px;
+            border: 2px solid #fff;
+        }
+
+        .slides input[type="radio"]:nth-of-type(1):checked~.controls-visible label:nth-of-type(1) {
+            background-color: #333;
+        }
+
+        .slides input[type="radio"]:nth-of-type(2):checked~.controls-visible label:nth-of-type(2) {
+            background-color: #333;
+        }
+
+        .slides input[type="radio"]:nth-of-type(3):checked~.controls-visible label:nth-of-type(3) {
+            background-color: #333;
+        }
+
+        .slides input[type="radio"]:nth-of-type(1):checked~.slide {
+            transform: translatex(0%);
+        }
+
+        .slides input[type="radio"]:nth-of-type(2):checked~.slide {
+            transform: translatex(-100%);
+        }
+
+        .slides input[type="radio"]:nth-of-type(3):checked~.slide {
+            transform: translatex(-200%);
+        }
+
+
+        /* Left/Right Button Classes Below */
+
+        .navigator {
+            position: absolute;
+            top: 50%;
+            transform: translatey(-50%);
+            width: 100%;
+            z-index: 1000;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            box-sizing: border-box;
+            display: none;
+        }
+
+        .navigator i {
+            font-size: 32px;
+            color #333;
+        }
+
+        .slides input[type="radio"]:nth-of-type(1):checked~.navigator:nth-of-type(1) {
+            display: flex;
+        }
+
+        .slides input[type="radio"]:nth-of-type(2):checked~.navigator:nth-of-type(2) {
+            display: flex;
+        }
+
+        .slides input[type="radio"]:nth-of-type(3):checked~.navigator:nth-of-type(3) {
+            display: flex;
+        }
+
+        div.mid {
+            /* border:1px solid pink; */
+            letter-spacing: 2px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 1200px;
+            /* margin: 0 auto; */
+            margin-top: 50px;
+        }
+
+        div.mid h1 {
+            /* border:1px solid pink; */
+            font-size: 3rem;
+            padding: 10px;
+            color: yellow;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        div.con1 {
+            /* border:1px solid pink; */
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 1200px;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        article.card {
+            border: 1px solid rgba(0, 0, 0, .125);
+            border-radius: 20px;
+            overflow: hidden;
+            margin: 0 auto;
+            /* margin-top: 30px; */
+            /* border:1px solid red; */
+        }
+
+        article.card a.img_block {
+            /* border:1px solid red; */
+            display: block;
+            font-size: 0;
+        }
+
+        article.card a.img_block>img {
+            /* border:1px solid red; */
+            max-width: 330px;
+            min-height: 220px;
+        }
+
+        article.card div.content_block {
+            /* border:1px solid green; */
+            padding: 20px 0 20px 0px;
+            margin-bottom:50px;
+            width:300px;
+        }
+
+        article.card h1 {
+            color: white;
+            margin: 0 0 5px 0;
+            font-size: 1.2rem;
+        }
+
+        article.card p {
+            color: white;
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        a.last {
+            /* padding-right:50px; */
+            /* border:1px solid blue; */
+            width: 1200px;
+            height: 100px;
+            color: blue;
+            text-decoration: none;
+            display: block;
+            margin: 0 auto;
+        }
+
+        a.last h1 {
+            /* border:1px solid blue; */
+            padding: 20px;
+            text-align: right;
+
+        }
+
+        p.fin {
+            color: lightgray;
+            /* border:1px solid blue; */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 1400px;
+            /* margin:0 auto; */
+            margin-top: 100px;
+        }
+
+        p.lilili {
+            margin-top: 30px;
+            border: 2px solid gray;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 1200px;
+            /* margin:0 auto; */
+        }
+
+        p.si {
+            padding: 10px;
+            color: pink;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="nav">
+        <ul class="list">
+            <li>
+                <a class="log" href="file:///C:/Users/%E6%B4%AA%E9%88%BA%E5%A0%82/Desktop/html%20code/FIRSTWEB/GOGO/index.html#"target="_blank">
+                    <img class="logo" src="../pic/cc.jpg" alt="error">
+                </a>
+                <a href="file:///C:/Users/%E6%B4%AA%E9%88%BA%E5%A0%82/Desktop/html%20code/FIRSTWEB/GOGO/NEWS.html">News</a>
+                <a href="file:///C:/Users/%E6%B4%AA%E9%88%BA%E5%A0%82/Desktop/html%20code/FIRSTWEB/GOGO/ABOUT.html" >About</a>
+                <a href="file:///C:/Users/%E6%B4%AA%E9%88%BA%E5%A0%82/Desktop/html%20code/FIRSTWEB/GOGO/EXPERIENCE.html#"style="color:orange;">Experience</a>
+                <a href="file:///C:/Users/%E6%B4%AA%E9%88%BA%E5%A0%82/Desktop/html%20code/FIRSTWEB/GOGO/EXPLORE.html#">Explore</a>
+                <a href="file:///C:/Users/%E6%B4%AA%E9%88%BA%E5%A0%82/Desktop/html%20code/FIRSTWEB/GOGO/EXHIBITION.html#">Exhibition</a>
+                <a href="file:///C:/Users/%E6%B4%AA%E9%88%BA%E5%A0%82/Desktop/html%20code/FIRSTWEB/GOGO/index.html">Access</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="top">
+        <h1>VIP Experience</h1>
+    </div>
+
+    <div class="sli">
+        <ul class="slides">
+            <input type="radio" id="control-1" name="control" checked>
+            <input type="radio" id="control-2" name="control">
+            <input type="radio" id="control-3" name="control">
+
+            <!--  Left/Right Button  -->
+            <div class="navigator slide-1">
+                <label for="control-3">
+                    <i class="fas fa-chevron-left"></i>
+                </label>
+                <label for="control-2">
+                    <i class="fas fa-chevron-right"></i>
+                </label>
+            </div>
+
+            <div class="navigator slide-2">
+                <label for="control-1">
+                    <i class="fas fa-chevron-left"></i>
+                </label>
+                <label for="control-3">
+                    <i class="fas fa-chevron-right"></i>
+                </label>
+            </div>
+
+            <div class="navigator slide-3">
+                <label for="control-2">
+                    <i class="fas fa-chevron-left"></i>
+                </label>
+                <label for="control-1">
+                    <i class="fas fa-chevron-right"></i>
+                </label>
+            </div>
+            <!--  /Left/Right Button  -->
+
+            <li class="slide">
+                <h1 style="font-size:1.5rem; ">NO RESERVATIONS AVAILABLENO</h1>
+            </li>
+
+            <li class="slide">
+                <h1 style="font-size:1.5rem; ">NO RESERVATIONS AVAILABLE</h1>
+            </li>
+
+            <li class="slide">
+                <h1 style="font-size:1.5rem; ">NO RESERVATIONS AVAILABLE</h1>
+            </li>
+
+            <div class="controls-visible">
+                <label for="control-1"></label>
+                <label for="control-2"></label>
+                <label for="control-3"></label>
+            </div>
+        </ul>
+    </div>
+
+    <div class="mid">
+        <h1>69 Things To Do...</h1>
+    </div>
+
+
+    <div class="con1">
+
+        <article class="card">
+
+            <a href="https://tw.yahoo.com/" target="_blank" class="img_block"><img src="https://m.media-amazon.com/images/M/MV5BMTUyNDg1NjU3N15BMl5BanBnXkFtZTgwNTY5Nzk5ODE@._V1_FMjpg_UX1280_.jpg"></a>
+
+            <div class="content_block">
+
+                <h1>Universal Studios Hollywood™ - Upper Lot</h1>
+
+                <p>Cletus’ Chicken Shack</p>
+
+            </div>
+
+        </article>
+
+        <article class="card">
+
+            <a href="https://tw.yahoo.com/" target="_blank" class="img_block"><img src="https://m.media-amazon.com/images/M/MV5BMTUyMTIxMTUyM15BMl5BanBnXkFtZTgwMTQ5Mzk3ODE@._V1_FMjpg_UX1280_.jpg"></a>
+
+            <div class="content_block">
+
+                <h1>Universal Studios Hollywood™ - Upper Lot</h1>
+
+                <p>Cletus’ Chicken ShackUniversal Studios Hollywood™ - Upper Lot</p>
+
+            </div>
+
+        </article>
+
+        <article class="card">
+
+            <a href="https://tw.yahoo.com/" target="_blank" class="img_block"><img src="https://m.media-amazon.com/images/M/MV5BMjQwMjY4MTYzNV5BMl5BanBnXkFtZTgwNzk4ODc4ODE@._V1_FMjpg_UX1280_.jpg"></a>
+
+            <div class="content_block">
+
+                <h1>Universal Studios Hollywood™ - Upper Lot</h1>
+
+                <p>Cletus’ Chicken Shack</p>
+
+            </div>
+
+        </article>
+
+        <article class="card">
+
+            <a href="https://tw.yahoo.com/" target="_blank" class="img_block"><img src="https://m.media-amazon.com/images/M/MV5BY2Y1MTdjNjQtZTBiMS00YjAzLWI3NTItN2NiN2I0YzU4YWI0XkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_FMjpg_UX1280_.jpg"></a>
+
+            <div class="content_block">
+
+                <h1>Universal Studios Hollywood™ - Upper Lot</h1>
+
+                <p>Cletus’ Chicken Shack</p>
+
+            </div>
+
+        </article>
+
+        <article class="card">
+
+            <a href="https://tw.yahoo.com/" target="_blank" class="img_block"><img src="https://m.media-amazon.com/images/M/MV5BYzYzN2I5NjktZTc2Yi00MDc4LTllYjEtYmViNGViNjAwNWU0XkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_FMjpg_UX1280_.jpg"></a>
+
+            <div class="content_block">
+
+                <h1>Universal Studios Hollywood™ - Upper Lot</h1>
+
+                <p>Cletus’ Chicken Shack</p>
+
+            </div>
+
+        </article>
+
+        <article class="card">
+
+            <a href="https://tw.yahoo.com/" target="_blank" class="img_block"><img src="https://m.media-amazon.com/images/M/MV5BNTQyYTM1NjUtZGY0Yy00OTM4LThhZGMtYmUwMDhkYThiMmYzXkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_FMjpg_UX1280_.jpg"></a>
+            <div class="content_block">
+
+                <h1>Universal Studios Hollywood™ - Upper Lot</h1>
+
+                <p>Cletus’ Chicken Shack</p>
+
+            </div>
+
+        </article>
+
+        <article class="card">
+
+            <a href="https://tw.yahoo.com/" target="_blank" class="img_block"><img src="https://m.media-amazon.com/images/M/MV5BMWU0ZWRjZWUtZDg2OS00ZGJhLTkyM2EtMjU5YmU2YWNjYzg0XkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_FMjpg_UX1280_.jpg"></a>
+
+            <div class="content_block">
+
+                <h1>Universal Studios Hollywood™ - Upper Lot</h1>
+
+                <p>Cletus’ Chicken Shack</p>
+
+            </div>
+
+        </article>
+
+
+        <article class="card">
+
+            <a href="https://tw.yahoo.com/" target="_blank" class="img_block"><img src="https://m.media-amazon.com/images/M/MV5BMjQ0NzI1OTQxOF5BMl5BanBnXkFtZTgwNDkwODk2ODE@._V1_FMjpg_UX1280_.jpg"></a>
+
+            <div class="content_block">
+
+                <h1>Universal Studios Hollywood™ - Upper Lot</h1>
+
+                <p>Cletus’ Chicken Shack</p>
+
+            </div>
+
+        </article>
+
+        <article class="card">
+
+            <a href="https://tw.yahoo.com/" target="_blank" class="img_block"><img src="https://m.media-amazon.com/images/M/MV5BMTg3MjI0MDg5MF5BMl5BanBnXkFtZTgwNzQ4NjI3ODE@._V1_FMjpg_UX1280_.jpg"></a>
+
+            <div class="content_block">
+
+                <h1>Universal Studios Hollywood™ - Upper Lot</h1>
+
+                <p>Cletus’ Chicken Shack</p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <a class="last" href="#">
+        <h1>Show More +</h1>
+    </a>
+
+    <p class="fin">AN INCITE COMPANY ™© <br> INCTERMS OF USEPRIVACY POLICY | DO NOT SELL MY PERSONAL INFORMATION</p>
+    <p class="lilili"></p>
+    <p class="si">This website is the 69th special work of the students of the TibaMe front-end design engineer class of Weiyu TibaMe. This platform is for learning and display purposes only. If you have concerns about infringement, you can send a
+        private message to [TibaMe-Front-end Design Engineer Training Class], and the follow-up will be handled by a dedicated person.</p>
+
+
+
+
+
+
+</body>
+
+</html>
