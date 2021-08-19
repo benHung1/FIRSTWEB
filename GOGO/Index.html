@@ -521,7 +521,7 @@
             margin: 20px;
             font-size: 2.5rem;
             color: yellow;
-            margin-left: 58%;
+            margin-left: 40%;
             margin-top: -2%;
             letter-spacing: 2px;
             /* width:100px; */
@@ -533,8 +533,18 @@
             background-color: black;
             /* border:1px solid red; */
             display: flex;
-            width: 33%;
-            margin-top: -25%;
+            justify-content: center;
+            align-items: center;
+            margin:0 auto;
+            width: 80%;
+            margin-top: 100px;
+            
+        }
+
+        div.t1 img{
+            border:1px solid darkgray;
+            transform:perspective(1000px) rotateY(-25deg); 
+            
         }
 
         span h1.tit1 {
@@ -545,18 +555,11 @@
             /* border:1px solid red; */
             text-align: center;
             font-size: 1.2rem;
-            margin-top: 50%;
+            margin-right:100px;
             letter-spacing: 2px;
-            /* padding-left:50px; */
+            padding-left: 50px;
         }
 
-        div.t2 {
-            background-color: black;
-            /* border:1px solid blue; */
-            width: 33%;
-            display: flex;
-            margin-left: 33%;
-        }
 
         span h1.tit2 {
             color: white;
@@ -566,7 +569,6 @@
             /* border:1px solid red; */
             text-align: center;
             font-size: 1.2rem;
-            margin-top: 50%;
             padding-left: 50px;
             letter-spacing: 2px;
 
@@ -576,38 +578,46 @@
             background-color: black;
             display: flex;
             /* border:1px solid blue; */
-            width: 33%;
-            align-items: flex-end;
-            margin-left: 60%;
+            width: 40%;
+            margin:0 auto;
+            margin-top:100px;
+        }
+
+        div.t3 img{
+            border:1px solid darkgray;
+            transform:perspective(1000px) rotateY(25deg); 
+            
         }
 
         span h1.tit3 {
             color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             /* border:1px solid red; */
             text-align: center;
             font-size: 1.2rem;
-            padding-left: 50px;
+            padding-left: 20px;
             letter-spacing: 2px;
-
+            margin-top:100px;
 
         }
 
         div.t4 {
             background-color: black;
             display: flex;
-            margin-left: 55%;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
             /* border:1px solid blue; */
             width: 33%;
+            margin-left:41%;
         }
 
         span h1.tit4 {
+            margin-top:-210px;
+            /* border:1px solid red; */
             vertical-align: middle;
             color: white;
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 1.5rem;
             letter-spacing: 2px;
             padding-right: 20px;
         }
@@ -616,7 +626,7 @@
             border-right: 5px solid gray;
             height: 50px;
             width: 200px;
-            margin-left: 47%;
+            margin-left: 30%;
 
         }
 
@@ -636,7 +646,6 @@
             display: flex;
             background-color: black;
             /* border:1px solid blue; */
-
         }
 
         a.last {
@@ -656,120 +665,67 @@
             height: 50px;
         }
 
-        #container {
-            width: 400px;
-            height: 300px;
-            overflow: hidden;
-            padding-bottom: 100px;
-            /* padding:200px 0 200px 0; */
+        div.card-box{
+            display:flex;
+            flex-direction: row;
         }
 
-        #photo {
-            width: 1200px;
-            animation: switch 5s ease-out infinite;
+
+        div.card-container{
+            width:300px;
+            height:400px;
+            position:relative;
+            perspective: 1000px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            margin:0 auto;
         }
 
-        #photo>img {
-            border-radius: 50%;
-            float: left;
-            width: 400px;
-            height: 300px;
+        .cover, .back{
+            width:100%;
+            height:100%;
+            position:absolute;
+            backface-visibility: hidden;
+            transition: transform .25s ease-in-out;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size:1.2rem;
+            border-radius: 10px;
+            box-shadow: 0 .2rem .5rem rgba(0, 0, 0, .18);
+            text-shadow: 0 .15rem .2rem rgba(0, 0, 0, .125);
         }
 
-        @keyframes switch {
-
-            0%,
-            25% {
-                margin-left: 0;
-            }
-
-            35%,
-            60% {
-                margin-left: -400px;
-            }
-
-            70%,
-            100% {
-                margin-left: -800px;
-            }
+        .cover{
+            background-image: url("https://tse3.mm.bing.net/th?id=OIP.i9RIip5r4EDt42b72LSl_QHaE6&pid=Api&P=0&w=227&h=151");
+            background-repeat: no-repeat;
+            background-size: cover;
+            transform: rotateY(0deg);
+            color:white;
         }
 
-        #container2 {
-            width: 400px;
-            height: 300px;
-            overflow: hidden;
-            padding-bottom: 100px;
-            /* padding:200px 0 200px 0; */
+        .card-container:hover .cover{
+            transform: rotatey(180deg);
         }
 
-        #photo2 {
-            width: 1200px;
-            animation: switch 5s ease-out infinite;
+        .back{
+            background-image: url("https://tse3.mm.bing.net/th?id=OIP.i9RIip5r4EDt42b72LSl_QHaE6&pid=Api&P=0&w=227&h=151");
+            background-repeat: no-repeat;
+            background-size: cover;
+            transform: rotateY(0deg);
+            color:black;
+            transform: rotatey(-180deg);
         }
 
-        #photo2>img {
-            border-radius: 50%;
-
-            float: left;
-            width: 400px;
-            height: 300px;
+        .card-container:hover .back{
+            transform: rotatey(0deg);
         }
 
-        @keyframes switch {
 
-            0%,
-            25% {
-                margin-left: 0;
-            }
 
-            35%,
-            60% {
-                margin-left: -400px;
-            }
 
-            70%,
-            100% {
-                margin-left: -800px;
-            }
-        }
 
-        #container3 {
-            width: 400px;
-            height: 300px;
-            overflow: hidden;
-            padding-bottom: 100px;
-            /* padding:200px 0 200px 0; */
-        }
-
-        #photo3 {
-            width: 1200px;
-            animation: switch 5s ease-out infinite;
-        }
-
-        #photo3>img {
-            border-radius: 50%;
-            float: left;
-            width: 400px;
-            height: 300px;
-        }
-
-        @keyframes switch {
-
-            0%,
-            25% {
-                margin-left: 0;
-            }
-
-            35%,
-            60% {
-                margin-left: -400px;
-            }
-
-            70%,
-            100% {
-                margin-left: -800px;
-            }
-        }
 
         div.footer {
             background-color: black;
@@ -1004,15 +960,14 @@
             <span>
                 <h1 class="tit1">WithOut Judgement</h1>
             </span>
+                <img class="i2" src="../pic/c2.gif">
+                <span>
+                    <h1 class="tit2">WithOut Consequence</h1>
+                </span>
         </div>
 
 
-        <div class="t2">
-            <img class="i2" src="../pic/c2.gif">
-            <span>
-                <h1 class="tit2">WithOut Consequence</h1>
-            </span>
-        </div>
+
 
         <div class="t3">
             <img class="i3" src="../pic/c333.gif" alt="">
@@ -1030,36 +985,42 @@
         <a class="last" href="#" <h1 class="pr">Products－Not For Sell</h1></a>
     </div>
 
-    <div class="sc">
-        <div id="container">
-            <p class="scl"></p>
-            <div id="photo">
-                <img src="https://img9.doubanio.com/view/thing_review/l/public/p4328970.webp" />
-                <img src="https://img9.doubanio.com/view/thing_review/l/public/p4328986.webp" />
-                <img src="https://img9.doubanio.com/view/thing_review/l/public/p4328989.webp" />
+    <div class="card-box">
+
+        <div class="card-container">
+            <div class="cover">
+                <h1>Not For Sell</h1>
             </div>
+
+            <div class="back">
+                <h1>Not For Sell</h1>
+            </div>
+
+        </div>
+        
+
+        <div class="card-container">
+            <div class="cover">
+                <h1>Not For Sell</h1>
+            </div>
+
+            <div class="back">
+                <h1>Not For Sell</h1>
+            </div>
+
         </div>
 
-        <div id="container2">
-            <p class="sc2"></p>
-            <div id="photo2">
-                <img src="https://img9.doubanio.com/view/thing_review/l/public/p4331881.webp" />
-                <img src="https://img9.doubanio.com/view/thing_review/l/public/p4331882.webp" />
-                <img src="https://img9.doubanio.com/view/thing_review/l/public/p4331883.webp" />
+        <div class="card-container">
+            <div class="cover">
+                <h1>Not For Sell</h1>
             </div>
-        </div>
 
-        <div id="container3">
-            <p class="sc3"></p>
-            <div id="photo3">
-                <img src="https://img9.doubanio.com/view/thing_review/l/public/p4297648.webp" />
-                <img src="https://img9.doubanio.com/view/thing_review/l/public/p4448472.webp" />
-                <img src="https://img9.doubanio.com/view/thing_review/l/public/p4327000.webp" />
+            <div class="back">
+                <h1>Not For Sell</h1>
             </div>
-        </div>
 
+        </div>
     </div>
-
     <!--以上為PRODUCT-->
 
     <div class="footer">
