@@ -4,20 +4,12 @@
 <head>
     <meta charset="utf-8">
     <title>FIRST-PAGE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
     <style media="screen">
-        @font-face {
-            font-family: "Abel";
-            src: local("Abel-Regular.ttf"),
-                url("Abel-Regular.woff"),
-                url("Abel-Regular.woff2");
-            font-weight: normal;
-            font-style: normal;
-            font-display: swap;
-        }
-        
-
         body {
-            font-family: 'Abel';
+            font-family: 'Abel', sans-serif;
             /* border:1px solid red; */
             margin: 0 auto;
             box-sizing: border-box;
@@ -30,7 +22,7 @@
             /* border: 1px solid red; */
             box-sizing: border-box;
             width: 100%;
-            height: 60vh;
+            height: 65vh;
             background-color: black;
             position: relative;
             overflow: hidden;
@@ -86,23 +78,6 @@
             width: 60px;
         }
 
-        div.t-1 {
-            /* background-color: black; */
-            /* border:1px solid blue; */
-            padding:0;
-            display:flex;
-            flex-direction: column;
-            justify-content: center;
-            background-color: #000;
-        }
-
-        div.t-1 h1.ti-1 {
-            /* border:1px solid red; */
-            color: gray;
-            font-size: 1.5rem;
-            margin:0 auto;
-        }
-
         a.vi {
             /* border:1px solid red; */
             text-decoration: none;
@@ -156,7 +131,7 @@
         h2.warning {
             color: white;
             text-align: center;
-            vertical-align: middle;
+            vertical-align:middle;
             font-size: 1.5rem;
             display: block;
             letter-spacing: 2px;
@@ -542,8 +517,15 @@
         }
 
         div.t1 img{
+            cursor: pointer;
             border:1px solid darkgray;
             transform:perspective(1000px) rotateY(-25deg); 
+            
+        }
+
+        div.t1 img:hover{
+            border:1px solid darkgray;
+            transform:perspective(1000px) rotateY(25deg); 
             
         }
 
@@ -584,9 +566,15 @@
         }
 
         div.t3 img{
+            cursor: pointer;
             border:1px solid darkgray;
             transform:perspective(1000px) rotateY(25deg); 
             
+        }
+
+        div.t3 img:hover {
+            border:1px solid darkgray;
+            transform:perspective(1000px) rotateY(-25deg); 
         }
 
         span h1.tit3 {
@@ -672,7 +660,7 @@
 
 
         div.card-container{
-            width:300px;
+            width:350px;
             height:400px;
             position:relative;
             perspective: 1000px;
@@ -698,11 +686,12 @@
         }
 
         .cover{
-            background-image: url("https://tse3.mm.bing.net/th?id=OIP.i9RIip5r4EDt42b72LSl_QHaE6&pid=Api&P=0&w=227&h=151");
+            background-image: url("../pic/p1.png");
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size:100vh;
             transform: rotateY(0deg);
             color:white;
+            
         }
 
         .card-container:hover .cover{
@@ -710,17 +699,107 @@
         }
 
         .back{
-            background-image: url("https://tse3.mm.bing.net/th?id=OIP.i9RIip5r4EDt42b72LSl_QHaE6&pid=Api&P=0&w=227&h=151");
-            background-repeat: no-repeat;
-            background-size: cover;
             transform: rotateY(0deg);
-            color:black;
+            color:white;
             transform: rotatey(-180deg);
+        }
+
+        .back h1,p{
+            display:flex;
+            flex-direction: column;
+            font-size:1.2rem;
+
+        }
+
+        .back2 h1,p{
+            font-size:1.2rem;
+
+        }
+
+        .back3 h1,p{
+            font-size:1.2rem;
+
         }
 
         .card-container:hover .back{
             transform: rotatey(0deg);
         }
+        .cover2, .back2{
+            width:100%;
+            height:100%;
+            position:absolute;
+            backface-visibility: hidden;
+            transition: transform .25s ease-in-out;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size:1.2rem;
+            border-radius: 10px;
+            box-shadow: 0 .2rem .5rem rgba(0, 0, 0, .18);
+            text-shadow: 0 .15rem .2rem rgba(0, 0, 0, .125);
+        }
+
+        .cover2{
+            background-image: url("https://projectfandom.com/wp-content/uploads/2018/06/Westworld-S2E8-Akecheta-in-Labs.jpeg");
+            background-repeat: no-repeat;
+            background-size:100vh;
+            transform: rotateY(0deg);
+            color:white;
+            
+        }
+
+        .card-container:hover .cover2{
+            transform: rotatey(180deg);
+        }
+
+        .back2{
+            transform: rotateY(0deg);
+            color:white;
+            transform: rotatey(-180deg);
+        }
+
+        .card-container:hover .back2{
+            transform: rotatey(0deg);
+        }
+
+        .cover3, .back3{
+            width:100%;
+            height:100%;
+            position:absolute;
+            backface-visibility: hidden;
+            transition: transform .25s ease-in-out;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size:1.2rem;
+            border-radius: 10px;
+            box-shadow: 0 .2rem .5rem rgba(0, 0, 0, .18);
+            text-shadow: 0 .15rem .2rem rgba(0, 0, 0, .125);
+        }
+
+        .cover3{
+            background-image: url("../pic/p2.png");
+            background-repeat: no-repeat;
+            background-size:100vh;
+            transform: rotateY(0deg);
+            color:white;
+            
+        }
+
+        .card-container:hover .cover3{
+            transform: rotatey(180deg);
+        }
+
+        .back3{
+            transform: rotateY(0deg);
+            color:white;
+            transform: rotatey(-180deg);
+        }
+
+        .card-container:hover .back3{
+            transform: rotatey(0deg);
+        }
+
 
 
 
@@ -845,10 +924,6 @@
             </li>
         </ul>
     </nav>
-
-    <div class="t-1">
-        <h1 class="ti-1">Life WithOut Loops</h1>
-    </div>
 
 
     <div class="video_placeholder">
@@ -982,41 +1057,42 @@
     <!--以上首頁第四頁-->
 
     <div class="pr1">
-        <a class="last" href="#" <h1 class="pr">Products－Not For Sell</h1></a>
+        <a class="last" href="#" <h1 class="pr">Products</h1></a>
     </div>
 
     <div class="card-box">
 
         <div class="card-container">
             <div class="cover">
-                <h1>Not For Sell</h1>
+                <h1 style="font-size:2.5rem;">Not For Sell</h1>
             </div>
 
             <div class="back">
-                <h1>Not For Sell</h1>
+                <!-- <h1>GEORGE</h1> -->
+                <h1>Dull, dirty, and dangerous no more.<br>Day or night, rain or shine</h1>
             </div>
 
         </div>
         
 
         <div class="card-container">
-            <div class="cover">
-                <h1>Not For Sell</h1>
+            <div class="cover2">
+                <h1 style="font-size:2.5rem;">Not For Sell</h1>
             </div>
 
-            <div class="back">
-                <h1>Not For Sell</h1>
+            <div class="back2">
+                <h1>With a touch delicate enough to nurture a calf and strong enough to plow a fleld</h1>
             </div>
 
         </div>
 
         <div class="card-container">
-            <div class="cover">
-                <h1>Not For Sell</h1>
+            <div class="cover3">
+                <h1 style="font-size:2.5rem;">Not For Sell</h1>
             </div>
 
-            <div class="back">
-                <h1>Not For Sell</h1>
+            <div class="back3">
+                <h1>More details will be provided as this product is developed further</h1>
             </div>
 
         </div>
