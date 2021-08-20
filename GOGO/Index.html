@@ -13,7 +13,7 @@
             /* border:1px solid red; */
             margin: 0 auto;
             box-sizing: border-box;
-            width: 1400px;
+            width: 1200px;
             background-color: black;
             
         }
@@ -124,9 +124,13 @@
             width: 100%;
             background-color: black;
             /* border: 1px solid purple; */
-            position: relative;
-            display: block;
-        }
+            /* position: relative; */
+            display: flex;
+            flex-direction: column;
+
+        }      
+
+
 
         h2.warning {
             color: white;
@@ -137,7 +141,16 @@
             letter-spacing: 2px;
             padding: 60px 0;
             /* border:1px solid blue; */
+            opacity: 0;
+           transform:scale(0.1);
+           transition:all 1s ease-in-out;
         }
+
+        h2.warning.active{
+            opacity:1;
+            transform: scale(1);
+        }  
+
 
         p.line {
             /* border:1px solid green; */
@@ -158,6 +171,14 @@
             text-align: center;
             padding: 30px 0;
             display: block;
+            opacity: 0;
+           transform:scale(0.1);
+           transition:all 1s ease-in-out;
+        }
+
+        p.content1.active{
+            opacity: 1;
+            transform: scale(1);
         }
 
         p.content2 {
@@ -169,6 +190,14 @@
             text-align: center;
             padding: 30px 0;
             display: block;
+            opacity: 0;
+           transform:scale(0.1);
+           transition:all 1s ease-in-out;
+        }
+
+        p.content2.active{
+            opacity: 1;
+            transform: scale(1);
         }
 
         div.logopac {
@@ -349,9 +378,9 @@
             color: darkgray;
             text-decoration: none;
             display: flex;
-            letter-spacing: 2px;
+            /* letter-spacing: 2px; */
             text-align: center;
-            padding: 5px;
+            padding: 10px;
 
         }
 
@@ -668,6 +697,9 @@
             justify-content: center;
             align-items: center;
             margin:0 auto;
+            border:1px solid gray;
+            border-radius: 10px;
+            cursor: pointer;
         }
 
         .cover, .back{
@@ -742,7 +774,7 @@
         .cover2{
             background-image: url("https://projectfandom.com/wp-content/uploads/2018/06/Westworld-S2E8-Akecheta-in-Labs.jpeg");
             background-repeat: no-repeat;
-            background-size:100vh;
+            background-size:cover;
             transform: rotateY(0deg);
             color:white;
             
@@ -1149,6 +1181,40 @@
             a private message to [TibaMe-Front-end Design Engineer Training Class], and the follow-up will be handled by a dedicated person.</p>
     </div>
 
+    <script>
+        window.addEventListener('scroll', ()=>{
+            let content = document.querySelector('.warning');
+            let contentPosition = content.getBoundingClientRect().top;
+            let screenPosition = window.innerHeight;
+            if(contentPosition < screenPosition){
+                content.classList.add('active');
+            }else{
+                content.classList.remove('active');
+            }
+        });
+
+        window.addEventListener('scroll', ()=>{
+            let content = document.querySelector('.content1');
+            let contentPosition = content.getBoundingClientRect().top;
+            let screenPosition = window.innerHeight;
+            if(contentPosition < screenPosition){
+                content.classList.add('active');
+            }else{
+                content.classList.remove('active');
+            }
+        });
+
+        window.addEventListener('scroll', ()=>{
+            let content = document.querySelector('.content2');
+            let contentPosition = content.getBoundingClientRect().top;
+            let screenPosition = window.innerHeight;
+            if(contentPosition < screenPosition){
+                content.classList.add('active');
+            }else{
+                content.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 
 </html>
