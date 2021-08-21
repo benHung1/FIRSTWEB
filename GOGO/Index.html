@@ -268,6 +268,14 @@
             font-size: 0;
         }
 
+        a.convert1:hover{
+            top:-5%;
+            transform: scale(1.2, 1.2);
+            z-index:100;
+            
+
+        }
+
         a.convert2 {
             /* border:1px solid red; */
             display: flex;
@@ -275,6 +283,13 @@
             overflow: hidden;
             font-size: 0;
             margin-top: 20%;
+        }
+
+        a.convert2:hover{
+            top:-5%;
+            transform: scale(1.2, 1.2);
+            z-index:100;
+
         }
 
         a.convert3 {
@@ -285,12 +300,25 @@
             margin-top: 50%;
         }
 
+        a.convert3:hover{
+            top:-5%;
+            transform: scale(1.2, 1.2);
+            z-index:100;
+
+        }
+
         a.convert4 {
             display: flex;
             position: relative;
             overflow: hidden;
             font-size: 0;
             margin-top: 20%;
+        }
+
+        a.convert4:hover{
+            top:-5%;
+            transform: scale(1.2, 1.2);
+            z-index:100;
 
         }
 
@@ -299,7 +327,14 @@
             position: relative;
             overflow: hidden;
             font-size: 0;
-            margin-left: -20px
+            margin-left: -20px;
+
+        }
+
+        a.convert5:hover{
+            top:-5%;
+            transform: scale(1.2, 1.2);
+            z-index:100;
         }
 
         .slider_container div img.new1 {
@@ -391,9 +426,8 @@
             left: 0;
             width: 100%;
             background-color: hsla(0, 0%, 0%, .5);
-            font-size: 1.2rem;
             color: white;
-            padding: 5px 10px;
+            font-size:1.2rem;
             transform: translateY(100%);
             transition: transform .5s;
         }
@@ -408,11 +442,11 @@
             left: 0;
             width: 100%;
             background-color: hsla(0, 0%, 0%, .5);
-            font-size: 1.2rem;
+            font-size:1.2rem;
             color: white;
-            padding: 5px 10px;
             transform: translateY(100%);
             transition: transform .5s;
+
         }
 
         a.convert2:hover span.info2 {
@@ -426,9 +460,8 @@
             left: 0;
             width: 100%;
             background-color: hsla(0, 0%, 0%, .5);
-            font-size: 1.2rem;
+            font-size:1.2rem;
             color: white;
-            padding: 5px 10px;
             transform: translateY(100%);
             transition: transform .5s;
         }
@@ -443,9 +476,8 @@
             left: 0;
             width: 100%;
             background-color: hsla(0, 0%, 0%, .5);
-            font-size: 1.2rem;
+            font-size:1.2rem;
             color: white;
-            padding: 5px 10px;
             transform: translateY(100%);
             transition: transform .5s;
         }
@@ -460,9 +492,8 @@
             left: 0;
             width: 100%;
             background-color: hsla(0, 0%, 0%, .5);
-            font-size: 1.2rem;
+            font-size:1.2rem;
             color: white;
-            padding: 5px 10px;
             transform: translateY(100%);
             transition: transform .1s;
         }
@@ -483,53 +514,32 @@
             position: relative;
             width: 100%;
             padding-bottom: 20px;
-
-
-        }
-
-        div.imgbox img {
-            background-color: black;
-            /* padding:0px 70px ; */
-            /* border:1px solid red; */
-            width: 100%;
         }
 
         article.card {
+            margin:40px 0 40px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             border: 0px solid rgba(0, 0, 0, .125);
             width: 100%;
-            /* border-radius: 10px; */
             overflow: hidden;
             /* border:1px solid blue; */
-            background-color: black;
-        }
-
-        article.card a.img_block {
-            display: block;
-            font-size: 0;
-            padding: 50px 0;
-            /* border:1px solid green; */
-
         }
 
         article.card a.img_block>img {
             width: 100%;
         }
 
-        article.card div.content_block {
-            padding: 10px;
-            margin-top: -70px;
-            /* border:1px solid green;  */
-        }
 
         article.card h1 {
-            margin: 20px;
+            margin:0;
+            text-align: center;
             font-size: 2.5rem;
             color: yellow;
-            margin-left: 40%;
-            margin-top: -2%;
-            letter-spacing: 2px;
-            /* width:100px; */
             /* border:1px solid red; */
+            letter-spacing: 2px;
+            margin-right:300px;
         }
 
 
@@ -540,22 +550,20 @@
             justify-content: center;
             align-items: center;
             margin:0 auto;
-            width: 80%;
+            width: 100%;
             margin-top: 100px;
-            
         }
 
         div.t1 img{
+            width:100%;
             cursor: pointer;
             border:1px solid darkgray;
             transform:perspective(1000px) rotateY(-25deg); 
-            
         }
 
         div.t1 img:hover{
             border:1px solid darkgray;
             transform:perspective(1000px) rotateY(25deg); 
-            
         }
 
         span h1.tit1 {
@@ -582,20 +590,22 @@
             font-size: 1.2rem;
             padding-left: 50px;
             letter-spacing: 2px;
-
         }
 
         div.t3 {
             background-color: black;
             display: flex;
+            justify-content: center;
+            align-items: center;
             /* border:1px solid blue; */
-            width: 40%;
+            width: 60%;
             margin:0 auto;
             margin-top:100px;
         }
 
         div.t3 img{
-            cursor: pointer;
+            width:60%;
+            /* cursor: pointer; */
             border:1px solid darkgray;
             transform:perspective(1000px) rotateY(25deg); 
             
@@ -613,23 +623,30 @@
             font-size: 1.2rem;
             padding-left: 20px;
             letter-spacing: 2px;
-            margin-top:100px;
+            margin-top:50px;
 
         }
 
         div.t4 {
-            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* border:1px solid blue; */
+        }
+
+        div.t4-1{
+            /* border:1px solid blue; */
+            margin:0 auto;
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
-            align-items: center;
-            /* border:1px solid blue; */
-            width: 33%;
-            margin-left:41%;
+            align-items: flex-start;
+            /* margin-right:100px; */
         }
 
+
         span h1.tit4 {
-            margin-top:-210px;
             /* border:1px solid red; */
             vertical-align: middle;
             color: white;
@@ -637,14 +654,15 @@
             font-size: 1.5rem;
             letter-spacing: 2px;
             padding-right: 20px;
+            
         }
 
         p.point {
             border-right: 5px solid gray;
-            height: 50px;
-            width: 200px;
-            margin-left: 30%;
-
+            height: 80px;
+            width: 600px;
+            margin:0;
+            margin-top:30px;
         }
 
         /*    以上首頁第四頁 page4      */
@@ -683,6 +701,7 @@
         }
 
         div.card-box{
+            /* border:1px solid gray; */
             display:flex;
             flex-direction: row;
         }
@@ -694,7 +713,7 @@
             position:relative;
             perspective: 1000px;
             display:flex;
-            justify-content: center;
+            justify-content: space-evenly;
             align-items: center;
             margin:0 auto;
             border:1px solid gray;
@@ -835,15 +854,15 @@
 
 
 
-
-
-
         div.footer {
+            /* border:1px solid red; */
+            margin-top:100px;
             background-color: black;
             overflow: hidden;
+
         }
 
-        div.footer h1.ac {
+        h1.ac {
             font-size: 2.5rem;
             color: yellow;
             display: flex;
@@ -853,8 +872,16 @@
             padding-bottom: 50px;
             letter-spacing: 2px;
             /* border:1px solid purple; */
-
+            opacity: 0;
+            transform:scale(0.1);
+            transition:all 1s ease-in-out;
         }
+
+        h1.ac.active {
+            opacity: 1;
+            transform:scale(1);
+        }
+
 
         div.ft1 {
             display: flex;
@@ -862,7 +889,16 @@
             align-items: center;
             color: gray;
             /* border:1px solid purple; */
+            opacity: 0;
+            transform:scale(0.1);
+            transition:all 1s ease-in-out;
         }
+
+        div.ft1.active {
+            opacity: 1;
+            transform:scale(1);
+        }
+
 
         div.ft1 h1.ff1 {
             margin-left: 25%;
@@ -871,7 +907,6 @@
         }
 
         div.ft1 p {
-            /* padding-right:150px; */
             font-size: 1.2rem;
             margin-left: 25px;
 
@@ -885,6 +920,14 @@
             justify-content: center;
             align-items: center;
             padding-bottom: 50px;
+            opacity: 0;
+            transform:scale(0.1);
+            transition:all 1s ease-in-out;
+        }
+
+        div.ip1.active {
+            opacity: 1;
+            transform:scale(1);
         }
 
         div.ip2 {
@@ -914,10 +957,19 @@
             cursor: pointer;
             letter-spacing: 1px;
             /* border:1px solid pink; */
+            opacity: 0;
+            transform:scale(0.1);
+            transition:all 1s ease-in-out;
+        }
+
+        button.bb.active {
+            opacity: 1;
+            transform:scale(1);
         }
 
         button.bb:hover {
-            background-color: orange;
+            background-color: black;
+            color:white;
             transform: scale(1.2);
         }
 
@@ -999,17 +1051,20 @@
 
     <div class="slider_container">
 
-        <div>
+        <div >
+
             <a class="convert1" href="#">
                 <img class="new1" src="../pic/w6.jpg" alt="pure css3 slider" />
-                <span class="info1">In the future, high society will live< in a leisure centre.<br> That’s the vision presented by the opening<br>minutes of Brave New World (Sky One)</span>
+                <span class="info1">In the future, high society will live in a leisure centre.That’s vision presented by the opening minutes of Brave New World (SkyOne)</span>
             </a>
+
+            
         </div>
 
         <div>
             <a class="convert2" href="#">
                 <img class="new2" src="../pic/w4.jpg" alt="pure css3 slider" />
-                <span class="info2">I feel like I’m a little kid again<br>playing cops and robbers on the biggest scale possible.<br>It’s so much fun and I love sci-fi <br> that’s my favourite genre. It’s great. </span>
+                <span class="info2">I feel like I’m a little kid again playing cops and robbers on the biggest scale possible.It’s so much fun and I love it that’s my favourite genre. It’s great. </span>
 
             </a>
         </div>
@@ -1017,21 +1072,21 @@
         <div>
             <a class="convert3" href="#">
                 <img class="new3" src="../pic/a1.jpg" alt="pure css3 slider" />
-                <span class="info3">AI can’t even get a read on human emotions.<br>in Ireland led a new studythat proved robots<br> can’t even figure out what the looks on our faces mean.<br></span>
+                <span class="info3">AI can’t even get a read on human emotions.in Ireland led a new study that proved robots</span>
             </a>
         </div>
 
         <div>
             <a class="convert4" href="#">
                 <img class="new4" src="../pic/g1.jpg" alt="pure css3 slider" />
-                <span class="info4">AI can’t even get a read on human emotions.<br>in Ireland led a new studythat proved robots<br> can’t even figure out what the looks on our faces mean.<br></span>
+                <span class="info4">AI can’t even get a read on human emotions.can’t even figure out what the looks on our faces mean.</span>
             </a>
         </div>
 
         <div>
             <a class="convert5" href="#">
                 <img class="new5" src="../pic/w5.jpg" alt="pure css3 slider" />
-                <span class="info5">AI can’t even get a read on human emotions.<br>in Ireland led a new studythat proved robots<br> can’t even figure out what the looks on our faces mean.<br></span>
+                <span class="info5">AI can’t even get a read on human emotions.in Ireland led a new studythat proved robot can’t even figure out what the looks on our faces mean.</span>
             </a>
         </div>
 
@@ -1040,25 +1095,22 @@
     <!--以上首頁第三頁-->
 
     <article class="card">
-        <a href="" target="_blank" class="img_block">
-            <img src="../pic/w11.jpg">
-        </a>
-
-        <div class="content_block">
-            <h1>Your Destinations</h1>
-            <p class="point"></p>
-
-        </div>
-
+            <div class="p4">
+                <img src="../pic/w11.jpg">
+                <h1>Your Destinations</h1>
+                <p class="point"></p>
+            </div>    
     </article>
 
     <div class="imgbox">
 
         <div class="t4">
-            <span>
-                <h1 class="tit4">Be<br> YourSelf.</h1>
-            </span>
-            <img class="i4" src="../pic/f1f1.gif" alt="">
+            <div class="t4-1">
+                <span>
+                    <h1 class="tit4">Be<br> YourSelf.</h1>
+                </span>
+                <img class="i4" src="../pic/f1f1.gif" alt="">
+            </div>
         </div>
 
 
@@ -1079,7 +1131,7 @@
         <div class="t3">
             <img class="i3" src="../pic/c333.gif" alt="">
             <span>
-                <h1 class="tit3">WithOut Limits</h1>
+                <h1 class="tit3">WithOut<br>Limits</h1>
             </span>
         </div>
 
@@ -1101,7 +1153,7 @@
 
             <div class="back">
                 <!-- <h1>GEORGE</h1> -->
-                <h1>Dull, dirty, and dangerous no more.<br>Day or night, rain or shine</h1>
+                <h1>Dull, dirty, and dangerous no more.Day or night, rain or shine</h1>
             </div>
 
         </div>
@@ -1214,6 +1266,53 @@
                 content.classList.remove('active');
             }
         });
+
+        window.addEventListener('scroll', ()=>{
+            let content = document.querySelector('.ac');
+            let contentPosition = content.getBoundingClientRect().top;
+            let screenPosition = window.innerHeight;
+            if(contentPosition < screenPosition){
+                content.classList.add('active');
+            }else{
+                content.classList.remove('active');
+            }
+        });
+
+        window.addEventListener('scroll', ()=>{
+            let content = document.querySelector('.ft1');
+            let contentPosition = content.getBoundingClientRect().top;
+            let screenPosition = window.innerHeight;
+            if(contentPosition < screenPosition){
+                content.classList.add('active');
+            }else{
+                content.classList.remove('active');
+            }
+        });
+
+        window.addEventListener('scroll', ()=>{
+            let content = document.querySelector('.ip1');
+            let contentPosition = content.getBoundingClientRect().top;
+            let screenPosition = window.innerHeight;
+            if(contentPosition < screenPosition){
+                content.classList.add('active');
+            }else{
+                content.classList.remove('active');
+            }
+        });
+
+        window.addEventListener('scroll', ()=>{
+            let content = document.querySelector('.bb');
+            let contentPosition = content.getBoundingClientRect().top;
+            let screenPosition = window.innerHeight;
+            if(contentPosition < screenPosition){
+                content.classList.add('active');
+            }else{
+                content.classList.remove('active');
+            }
+        });
+
+
+
     </script>
 </body>
 
