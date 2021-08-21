@@ -321,6 +321,8 @@ a.convert1 {
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: nowrap;
+    transform:scale(1,1);
+    transition: all 1s ease-out;
     
 }
 
@@ -378,6 +380,8 @@ a.convert2 {
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: nowrap;
+    transform:scale(1,1);
+    transition: all 1s ease-out;
     
 }
 
@@ -435,6 +439,8 @@ a.convert3 {
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: nowrap;
+    transform:scale(1,1);
+    transition: all 1s ease-out;
     
 }
 
@@ -480,6 +486,7 @@ a.convert3:hover span.info3 {
     align-items: flex-start;
     flex-wrap: nowrap;
     /* border:1px solid red; */
+
 }
 
 a.convert4{
@@ -493,6 +500,8 @@ a.convert4{
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: nowrap;
+    transform:scale(1,1);
+    transition: all 1s ease-out;
     
 }
 
@@ -672,6 +681,18 @@ div.t4 {
     justify-content: center;
     align-items: center;
     /* border:1px solid blue; */
+}
+
+img.i4{
+    transform:scale(1,1);
+    transition: all 1s ease-out;
+}
+
+img.i4:hover{
+    cursor:pointer;
+    top:-5%;
+    transform: scale(1.1, 1.1);
+    z-index: 500;
 }
 
 div.t4-1{
