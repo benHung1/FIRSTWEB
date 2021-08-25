@@ -680,34 +680,27 @@ p.point {
 
 /*    以上首頁第四頁 page4      */
 
-div.sc {
-  background-color: black;
-  display: flex;
-  justify-content: space-around;
-  /* padding:150px 0 150px 0; */
-  position: relative;
-  /* border:1px solid red; */
-}
-
 div.pr1 {
   padding: 100px 0 100px 0;
   display: flex;
+  justify-content: center;
   background-color: black;
-  /* border:1px solid blue; */
-}
-
-a.last {
-  display: block;
-  font-size: 2.5rem;
-  /* border:1px solid red; */
-  color: yellow;
-  text-decoration: none;
+  /* border: 1px solid blue; */
   margin: 0 auto;
   padding: 20px;
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+
+div.pr1 h1 {
+  cursor: pointer;
+  /* border: 1px solid red; */
+  font-size: 2.5rem;
+  color: yellow;
   letter-spacing: 2px;
 }
 
-a.last:hover {
+div.pr1 h1:hover {
   transform: scale(1.2, 1.2);
   color: lightsalmon;
   transition: all 0.1s ease-in-out;
@@ -748,7 +741,6 @@ div.card-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
   border-radius: 10px;
   box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.18);
   text-shadow: 0 0.15rem 0.2rem rgba(0, 0, 0, 0.125);
@@ -884,7 +876,7 @@ h1.ac {
   color: yellow;
   padding-bottom: 50px;
   letter-spacing: 2px;
-  /* border:1px solid purple; */
+  /* border: 1px solid purple; */
   opacity: 0;
   transform: scale(0.1);
   transition: all 1s ease-in-out;
@@ -908,7 +900,7 @@ div.ft1 {
   justify-content: center;
   align-items: center;
   color: gray;
-  /* border:1px solid purple; */
+  /* border: 1px solid purple; */
   opacity: 0;
   transform: scale(0.1);
   transition: all 1s ease-in-out;
@@ -920,19 +912,20 @@ div.ft1.active {
 }
 
 div.ft1 h1.ff1 {
-  margin-left: 25%;
+  font-size: 1.5rem;
+  margin-left: 20%;
   color: gray;
-  /* border:1px solid red; */
+  /* border: 1px solid red; */
 }
 
-div.ft1 p {
-  font-size: 1.2rem;
-  margin-left: 25px;
+div.ft1 p,
+h1 {
+  font-size: 1.5rem;
 }
 
 div.ip1 {
   width: 100%;
-  /* border:1px solid white; */
+  /* border: 1px solid white; */
   letter-spacing: 2px;
   display: flex;
   color: white;
@@ -944,25 +937,37 @@ div.ip1 {
   transition: all 1s ease-in-out;
 }
 
+div.ip1 h1,
+h3 {
+  font-size: 1.2rem;
+}
+
 div.ip1.active {
   opacity: 1;
   transform: scale(1);
 }
 
 div.ip2 {
-  /* border:1px solid white; */
+  /* border: 1px solid white; */
   display: flex;
   color: white;
   justify-content: center;
-  margin-left: 5%;
+  margin-left: 20%;
   align-items: center;
   letter-spacing: 2px;
 }
 
 div.ip1 {
-  background-image: url(https://img.ixintu.com/download/jpg/202106/e5b7ea77fd6194eb7c0f2db6e700f796_800_375.jpg!con);
+  background-image: url(https://m.media-amazon.com/images/M/MV5BOWY5M2JiMWEtZWExNS00MmQzLWIwMzgtMGI3OTY2ZTRmZjM4XkEyXkFqcGdeQXVyOTA3MTMyOTk@._V1_FMjpg_UX1280_.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+input.in1,
+input.in2,
+select,
+input {
+  font-size: 1.2rem;
 }
 
 button.bb {
@@ -974,7 +979,7 @@ button.bb {
   padding: 10px;
   cursor: pointer;
   letter-spacing: 1px;
-  /* border:1px solid pink; */
+  /* border: 1px solid pink; */
   opacity: 0;
   transform: scale(0.1);
   transition: all 1s ease-in-out;
@@ -991,11 +996,24 @@ button.bb:hover {
   transform: scale(1.2);
 }
 
+div.final {
+  /* border: 1px solid red; */
+  width: 1200px;
+  display: flex;
+  margin-top: 100px;
+}
+
+a > i {
+  font-size: 4rem;
+  color: white;
+}
+
 p.fin {
   color: lightgray;
-  /* border:1px solid blue; */
-  margin-top: 100px;
+  margin: 0;
+  /* border: 1px solid blue; */
   width: 100%;
+  font-size: 1.2rem;
 }
 
 p.lilili {
@@ -1007,4 +1025,5 @@ p.lilili {
 p.si {
   padding: 10px;
   color: pink;
+  font-size: 1.2rem;
 }
