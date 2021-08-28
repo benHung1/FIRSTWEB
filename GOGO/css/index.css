@@ -372,7 +372,7 @@ h2.view {
   align-items: flex-start;
   flex-wrap: nowrap;
   margin-left: 5%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 a.convert1 {
@@ -388,7 +388,8 @@ a.convert1 {
 
 @media screen and (max-width: 767px) {
   a.convert1 {
-    max-width: 50%;
+    width: 490px;
+    height: 275px;
   }
 }
 
