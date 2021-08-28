@@ -39,7 +39,7 @@ nav.nav {
   /* border: 1px solid red; */
   display: block;
   padding: 0px;
-  margin: 0px;
+  margin: 0px auto;
   position: relative;
   top: 0;
   width: 100%;
@@ -184,6 +184,10 @@ p.line-1 {
 }
 
 /*   以上是首頁 | page1   */
+
+img {
+  object-fit: cover;
+}
 
 div.other_contents {
   padding: 10px;
@@ -1248,7 +1252,6 @@ p.lilili {
 }
 
 p.si {
-  padding: 10px;
   color: pink;
   font-size: 1.2rem;
 }
