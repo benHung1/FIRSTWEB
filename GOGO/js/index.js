@@ -77,10 +77,17 @@ window.addEventListener('scroll', ()=>{
 
 $(function() {
     $( "#datepicker-13" ).datepicker();
-    $( "#datepicker-13" ).datepicker("show");
  });
 
  $(function() {
     $( "#datepicker-14" ).datepicker();
-    $( "#datepicker-14" ).datepicker("show");
  });
+
+ $(function(){
+  
+    // 點擊按鈕，選單縮放
+    $("button.btn_switch").on("click", function(){
+      $("nav.nav").slideToggle();
+    });
+    
+  });

@@ -3,7 +3,6 @@ body {
   /* border:1px solid red; */
   margin: 0 auto;
   box-sizing: border-box;
-  width: 1200px;
   background-color: black;
 }
 
@@ -15,6 +14,13 @@ div.video_placeholder {
   background-color: black;
   position: relative;
   overflow: hidden;
+}
+
+@media screen and (max-width: 767px) {
+  div.video_placeholder {
+    width: 100vw;
+    height: 100vw;
+  }
 }
 
 #the_video {
@@ -30,15 +36,27 @@ div.video_placeholder {
 }
 
 nav.nav {
-  /* border:1px solid red; */
+  /* border: 1px solid red; */
   display: block;
   padding: 0px;
   margin: 0px;
   position: relative;
   top: 0;
   width: 100%;
-  z-index: 500;
   background: #000;
+}
+
+@media screen and (min-width: 768px) {
+  nav.nav {
+    /*     display: block; */
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  nav.nav {
+    display: none;
+  }
 }
 
 ul.list {
@@ -53,6 +71,23 @@ ul.list > li {
   align-items: center;
 }
 
+@media screen and (max-width: 767px) {
+  ul.list > li {
+    display: block;
+  }
+}
+
+button.btn_switch {
+  display: none;
+}
+/* 行動版時，將按鈕顯示出來 */
+@media screen and (max-width: 767px) {
+  button.btn_switch {
+    display: inline-block;
+    margin: 20px;
+  }
+}
+
 ul.list > li > a {
   /* border:1px solid green; */
   padding: 10px;
@@ -63,14 +98,39 @@ ul.list > li > a {
   margin-right: 50px;
 }
 
+@media (max-width: 767px) {
+  ul.list > li > a {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 ul.list > li > a:hover {
   transform: scale(1.2, 1.2);
   color: lightsalmon;
   transition: all 0.1s ease-in-out;
 }
 
+@media (max-width: 767px) {
+  ul.list > li > a:hover {
+    transform: scale(1, 1);
+  }
+}
+
+button.btn_switch {
+  font-size: 1.5rem;
+}
+
 a.log > img.logo {
   width: 60px;
+}
+
+@media (max-width: 767px) {
+  a.log {
+    position: absolute;
+    visibility: hidden;
+  }
 }
 
 a.vi {
@@ -79,18 +139,28 @@ a.vi {
   padding: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   background-color: #000;
 }
 
 div.fir-end {
-  /* border:1px solid pink; */
+  /* border: 1px solid pink; */
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: black;
+}
+
+@media (max-width: 767px) {
+  div.fir-end {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }
 
 a.vi > h2 {
@@ -124,6 +194,13 @@ div.other_contents {
   /* position: relative; */
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 767px) {
+  div.other_contents {
+    width: 100vw;
+    /* height: 100vh; */
+  }
 }
 
 h2.warning {
@@ -247,6 +324,12 @@ div.pg2 {
   /* border: 1px solid blue; */
 }
 
+@media (max-width: 767px) {
+  div.pg2 {
+    width: 100vw;
+  }
+}
+
 a.pg22 {
   text-decoration: none;
 }
@@ -288,20 +371,17 @@ h2.view {
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: nowrap;
-  /* border:1px solid red; */
+  margin-left: 5%;
+  /* border: 1px solid red; */
 }
 
 a.convert1 {
-  max-width: 100%;
-  /* border:1px solid green; */
+  width: 100%;
+  /* border: 1px solid green; */
   position: relative;
   overflow: hidden;
   font-size: 0;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: nowrap;
   transform: scale(1, 1);
   transition: all 1s ease-out;
 }
@@ -312,10 +392,16 @@ a.convert1:hover {
   z-index: 100;
 }
 
+@media screen and (max-width: 767px) {
+  a.convert1:hover {
+    top: 0%;
+    transform: scale(1, 1);
+  }
+}
+
 .slider_container img.new1 {
-  margin: 0 auto;
   max-width: 100%;
-  /* border:1px solid blue; */
+  /* border: 1px solid blue; */
 }
 
 span.info1 {
@@ -339,25 +425,17 @@ a.convert1:hover span.info1 {
   margin-left: auto;
   max-width: 50%;
   position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-  /* border:1px solid red; */
+  margin-right: 5%;
+  /* border: 1px solid red; */
 }
 
 a.convert2 {
   max-width: 100%;
-  /* border:1px solid green; */
+  /* border: 1px solid green; */
   position: relative;
   overflow: hidden;
   font-size: 0;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: nowrap;
   transform: scale(1, 1);
   transition: all 1s ease-out;
 }
@@ -366,6 +444,13 @@ a.convert2:hover {
   top: -5%;
   transform: scale(1.1, 1.1);
   z-index: 100;
+}
+
+@media screen and (max-width: 767px) {
+  a.convert2:hover {
+    top: 0%;
+    transform: scale(1, 1);
+  }
 }
 
 .slider_container2 img.new2 {
@@ -394,11 +479,7 @@ a.convert2:hover span.info2 {
 .slider_container3 {
   max-width: 50%;
   position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: nowrap;
+  margin-left: 5%;
   /* border:1px solid red; */
 }
 
@@ -409,10 +490,6 @@ a.convert3 {
   overflow: hidden;
   font-size: 0;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: nowrap;
   transform: scale(1, 1);
   transition: all 1s ease-out;
 }
@@ -421,6 +498,13 @@ a.convert3:hover {
   top: -5%;
   transform: scale(1.1, 1.1);
   z-index: 100;
+}
+
+@media screen and (max-width: 767px) {
+  a.convert3:hover {
+    top: 0%;
+    transform: scale(1, 1);
+  }
 }
 
 .slider_container3 img.new3 {
@@ -450,12 +534,8 @@ a.convert3:hover span.info3 {
   margin-left: auto;
   max-width: 50%;
   position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-  /* border:1px solid red; */
+  margin-right: 5%;
+  /* border: 1px solid red; */
 }
 
 a.convert4 {
@@ -465,10 +545,6 @@ a.convert4 {
   overflow: hidden;
   font-size: 0;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: nowrap;
   transform: scale(1, 1);
   transition: all 1s ease-out;
 }
@@ -477,6 +553,13 @@ a.convert4:hover {
   top: -5%;
   transform: scale(1.1, 1.1);
   z-index: 100;
+}
+
+@media screen and (max-width: 767px) {
+  a.convert4:hover {
+    top: 0%;
+    transform: scale(1, 1);
+  }
 }
 
 .slider_container4 img.new4 {
@@ -506,7 +589,7 @@ a.convert4:hover span.info4 {
 
 div.imgbox {
   overflow: hidden;
-  /* border:1px solid purple; */
+  /* border: 1px solid purple; */
   background-color: black;
   padding: 0 0 0px 0;
   display: flex;
@@ -524,11 +607,13 @@ article.card {
   border: 0px solid rgba(0, 0, 0, 0.125);
   width: 100%;
   overflow: hidden;
-  /* border:1px solid blue; */
+  /* border: 1px solid blue; */
 }
 
-article.card a.img_block > img {
-  width: 100%;
+@media screen and (max-width: 767px) {
+  article.card {
+    width: 100vw;
+  }
 }
 
 article.card h1 {
@@ -536,9 +621,16 @@ article.card h1 {
   text-align: center;
   font-size: 2.5rem;
   color: yellow;
-  /* border:1px solid red; */
+  /* border: 1px solid red; */
   letter-spacing: 2px;
   margin-right: 300px;
+}
+
+@media screen and (max-width: 767px) {
+  article.card h1 {
+    width: 100vw;
+    margin: 0 auto;
+  }
 }
 
 article.card h1:hover {
@@ -548,19 +640,29 @@ article.card h1:hover {
   transition: all 0.1s ease-in-out;
 }
 
-div.t1 {
-  background-color: black;
-  /* border:1px solid red; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+div.t1-t2 {
+  /* border: 1px solid red; */
   width: 100%;
-  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 50px;
+}
+
+@media screen and (max-width: 767px) {
+  div.t1-t2 {
+    width: 100vw;
+    /* margin-right: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 div.t1 img {
-  width: 100%;
+  width: 380px;
   cursor: pointer;
   border: 1px solid darkgray;
   transform: perspective(1000px) rotateY(-25deg);
@@ -576,58 +678,71 @@ span h1.tit1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border:1px solid red; */
   text-align: center;
   font-size: 1.2rem;
-  margin-right: 100px;
   letter-spacing: 2px;
-  padding-left: 50px;
+}
+
+div.t2 img {
+  width: 380px;
+  height: 212px;
+  cursor: pointer;
+  border: 1px solid darkgray;
+  transform: perspective(1000px) rotateY(25deg);
+}
+
+div.t2 img:hover {
+  border: 1px solid darkgray;
+  transform: perspective(1000px) rotateY(-25deg);
 }
 
 span h1.tit2 {
   color: white;
   display: flex;
+  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
-  /* border:1px solid red; */
+  /* border: 1px solid red; */
   text-align: center;
   font-size: 1.2rem;
-  padding-left: 50px;
   letter-spacing: 2px;
 }
 
 div.t3 {
   background-color: black;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border:1px solid blue; */
-  width: 60%;
+  /* border: 1px solid blue; */
+  width: 100%;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 div.t3 img {
   cursor: pointer;
-  width: 60%;
-  /* cursor: pointer; */
+  width: 400px;
+  cursor: pointer;
   border: 1px solid darkgray;
-  transform: perspective(1000px) rotateY(25deg);
+  /* transform: perspective(1000px) rotateY(25deg); */
 }
 
 div.t3 img:hover {
   border: 1px solid darkgray;
-  transform: perspective(1000px) rotateY(-25deg);
+  /* transform: perspective(1000px) rotateY(-25deg); */
 }
 
 span h1.tit3 {
   color: white;
-  /* border:1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
   text-align: center;
   font-size: 1.2rem;
-  padding-left: 20px;
   letter-spacing: 2px;
-  margin-top: 50px;
 }
 
 div.t4 {
@@ -635,7 +750,13 @@ div.t4 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border:1px solid blue; */
+  /* border: 1px solid blue; */
+}
+
+@media screen and (max-width: 767px) {
+  div.t4 {
+    width: 100vw;
+  }
 }
 
 img.i4 {
@@ -646,12 +767,18 @@ img.i4 {
 img.i4:hover {
   cursor: pointer;
   top: -5%;
-  transform: scale(1.1, 1.1);
+  transform: scale(1.05, 1.05);
   z-index: 500;
 }
 
+@media screen and (max-width: 767px) {
+  img.i4:hover {
+    transform: scale(1, 1);
+  }
+}
+
 div.t4-1 {
-  /* border:1px solid blue; */
+  /* border: 1px solid blue; */
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -660,8 +787,19 @@ div.t4-1 {
   /* margin-right:100px; */
 }
 
+@media screen and (max-width: 767px) {
+  div.t4-1 {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 span h1.tit4 {
-  /* border:1px solid red; */
+  /* border: 1px solid red; */
   vertical-align: middle;
   color: white;
   text-align: center;
@@ -676,6 +814,14 @@ p.point {
   width: 600px;
   margin: 0;
   margin-top: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  p.point {
+    width: 0;
+    position: absolute;
+    visibility: hidden;
+  }
 }
 
 /*    以上首頁第四頁 page4      */
@@ -700,6 +846,16 @@ div.pr1 h1 {
   letter-spacing: 2px;
 }
 
+@media screen and (max-width: 767px) {
+  div.pr1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 div.pr1 h1:hover {
   transform: scale(1.2, 1.2);
   color: lightsalmon;
@@ -712,9 +868,21 @@ h1.pr {
 }
 
 div.card-box {
-  /* border:1px solid gray; */
+  /* border: 1px solid gray; */
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  div.card-box {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 }
 
 div.card-container {
@@ -722,9 +890,6 @@ div.card-container {
   height: 400px;
   position: relative;
   perspective: 1000px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
   margin: 0 auto;
   border: 1px solid gray;
   border-radius: 10px;
@@ -801,7 +966,7 @@ p {
 }
 
 .cover2 {
-  background-image: url("https://projectfandom.com/wp-content/uploads/2018/06/Westworld-S2E8-Akecheta-in-Labs.jpeg");
+  background-image: url("https://data1.ibtimes.co.in/en/full/623885/westworld.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   transform: rotateY(0deg);
@@ -860,8 +1025,10 @@ p {
   transform: rotatey(0deg);
 }
 
+/*    以上首頁第五頁 page5      */
+
 div.footer {
-  /* border:1px solid red; */
+  /* border: 1px solid red; */
   margin-top: 100px;
   background-color: black;
   overflow: hidden;
@@ -871,10 +1038,19 @@ div.footer {
   align-items: center;
 }
 
+@media screen and (max-width: 767px) {
+  div.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 h1.ac {
   font-size: 2.5rem;
   color: yellow;
-  padding-bottom: 50px;
   letter-spacing: 2px;
   /* border: 1px solid purple; */
   opacity: 0;
@@ -884,7 +1060,7 @@ h1.ac {
 
 h1.ac:hover {
   cursor: pointer;
-  transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2) !important;
   color: lightsalmon;
   transition: all 0.1s ease-in-out;
 }
@@ -937,6 +1113,16 @@ div.ip1 {
   transition: all 1s ease-in-out;
 }
 
+@media screen and (max-width: 767px) {
+  div.ip1 {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 div.ip1 h1,
 h3 {
   font-size: 1.2rem;
@@ -955,6 +1141,17 @@ div.ip2 {
   margin-left: 20%;
   align-items: center;
   letter-spacing: 2px;
+}
+
+@media screen and (max-width: 767px) {
+  div.ip2 {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 150px;
+  }
 }
 
 div.ip1 {
@@ -998,14 +1195,18 @@ button.bb:hover {
 
 div.final {
   /* border: 1px solid red; */
-  width: 1200px;
   display: flex;
   margin-top: 100px;
+  margin-right: auto;
+  width: 90%;
 }
 
 a > i {
+  /* border: 1px solid red; */
   font-size: 4rem;
   color: white;
+  justify-content: center;
+  align-items: center;
 }
 
 p.fin {
@@ -1019,7 +1220,7 @@ p.fin {
 p.lilili {
   margin-top: 30px;
   border: 2px solid gray;
-  width: 100%;
+  width: 100vw;
 }
 
 p.si {
