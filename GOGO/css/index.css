@@ -363,6 +363,13 @@ h2.view {
   margin-bottom: 100px;
 }
 
+h2.view:hover {
+  transform: scale(1.2, 1.2);
+  border: 3px solid lightsalmon;
+  color: lightsalmon;
+  transition: all 0.1s ease-in-out;
+}
+
 .slider_container {
   max-width: 50%;
   position: relative;
@@ -375,7 +382,7 @@ h2.view {
   /* border: 1px solid red; */
 }
 
-a.convert1 {
+section.convert1 {
   max-width: 100%;
   /* border: 1px solid green; */
   position: relative;
@@ -393,10 +400,11 @@ a.convert1 {
   }
 }
 
-a.convert1:hover {
+section.convert1:hover {
   top: -5%;
   transform: scale(1.1, 1.1);
   z-index: 100;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {
@@ -430,7 +438,7 @@ span.info1 {
   }
 }
 
-a.convert1:hover span.info1 {
+section.convert1:hover span.info1 {
   transform: translateY(0%);
 }
 
@@ -442,7 +450,7 @@ a.convert1:hover span.info1 {
   /* border: 1px solid red; */
 }
 
-a.convert2 {
+section.convert2 {
   max-width: 100%;
   /* border: 1px solid green; */
   position: relative;
@@ -453,10 +461,11 @@ a.convert2 {
   transition: all 1s ease-out;
 }
 
-a.convert2:hover {
+section.convert2:hover {
   top: -5%;
   transform: scale(1.1, 1.1);
   z-index: 100;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {
@@ -485,7 +494,7 @@ span.info2 {
   line-height: 30px;
 }
 
-a.convert2:hover span.info2 {
+section.convert2:hover span.info2 {
   transform: translateY(0%);
 }
 
@@ -496,7 +505,7 @@ a.convert2:hover span.info2 {
   /* border:1px solid red; */
 }
 
-a.convert3 {
+section.convert3 {
   max-width: 100%;
   /* border:1px solid green; */
   position: relative;
@@ -507,10 +516,11 @@ a.convert3 {
   transition: all 1s ease-out;
 }
 
-a.convert3:hover {
+section.convert3:hover {
   top: -5%;
   transform: scale(1.1, 1.1);
   z-index: 100;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {
@@ -539,7 +549,7 @@ span.info3 {
   line-height: 30px;
 }
 
-a.convert3:hover span.info3 {
+section.convert3:hover span.info3 {
   transform: translateY(0%);
 }
 
@@ -551,7 +561,7 @@ a.convert3:hover span.info3 {
   /* border: 1px solid red; */
 }
 
-a.convert4 {
+section.convert4 {
   max-width: 100%;
   /* border:1px solid green; */
   position: relative;
@@ -562,10 +572,11 @@ a.convert4 {
   transition: all 1s ease-out;
 }
 
-a.convert4:hover {
+section.convert4:hover {
   top: -5%;
   transform: scale(1.1, 1.1);
   z-index: 100;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {
@@ -594,7 +605,7 @@ span.info4 {
   line-height: 30px;
 }
 
-a.convert4:hover span.info4 {
+section.convert4:hover span.info4 {
   transform: translateY(0%);
 }
 
