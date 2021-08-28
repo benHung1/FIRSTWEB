@@ -372,11 +372,11 @@ h2.view {
   align-items: flex-start;
   flex-wrap: nowrap;
   margin-left: 5%;
-  /* border: 1px solid red; */
+  border: 1px solid red;
 }
 
 a.convert1 {
-  width: 100%;
+  max-width: 100%;
   /* border: 1px solid green; */
   position: relative;
   overflow: hidden;
@@ -384,6 +384,12 @@ a.convert1 {
   display: flex;
   transform: scale(1, 1);
   transition: all 1s ease-out;
+}
+
+@media screen and (max-width: 767px) {
+  a.convert1 {
+    max-width: 50%;
+  }
 }
 
 a.convert1:hover {
@@ -415,6 +421,12 @@ span.info1 {
   transform: translateY(100%);
   transition: transform 0.5s;
   line-height: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  span.info1 {
+    transform: translateY(0%);
+  }
 }
 
 a.convert1:hover span.info1 {
