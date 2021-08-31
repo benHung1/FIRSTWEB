@@ -438,7 +438,7 @@ span.info1 {
 
 @media screen and (max-width: 767px) {
   span.info1 {
-    transform: translateY(0%);
+    transform: translateY(100%);
   }
 }
 

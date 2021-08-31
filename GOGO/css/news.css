@@ -1,13 +1,11 @@
 body {
   font-family: "Abel", sans-serif;
-  /* border:1px solid red; */
   margin: 0 auto;
   box-sizing: border-box;
   background-color: black;
 }
 
 nav.nav {
-  /* border: 1px solid red; */
   display: block;
   padding: 0px;
   margin: 0px auto;
@@ -19,7 +17,6 @@ nav.nav {
 
 @media screen and (min-width: 768px) {
   nav.nav {
-    /*     display: block; */
     display: block !important;
   }
 }
@@ -60,7 +57,6 @@ button.btn_switch {
 }
 
 ul.list > li > a {
-  /* border:1px solid green; */
   padding: 10px;
   color: yellow;
   font-size: 1.2rem;
@@ -71,7 +67,6 @@ ul.list > li > a {
 
 @media (max-width: 767px) {
   ul.list > li > a {
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
   }
@@ -109,7 +104,6 @@ div.title {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid pink; */
   color: yellow;
 }
 
@@ -124,7 +118,6 @@ h1.t1 {
 
 div.container {
   width: 100%;
-  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -138,7 +131,6 @@ img {
 }
 
 a img.show {
-  /* border: 1px solid green; */
   border-radius: 10px;
   max-width: 300px;
   min-height: 150px;
@@ -155,7 +147,6 @@ div.package1 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* border: 1px solid red; */
   margin-bottom: 50px;
 }
 
@@ -164,7 +155,6 @@ div.pp1 a {
 }
 
 div.pp1 a h1.c1 {
-  /* border: 1px solid green; */
   width: 250px;
   padding: 10px;
   color: white;
@@ -178,7 +168,6 @@ div.pp1 a h1.c1 {
 }
 
 div.pp1 p {
-  /* border:1px solid green; */
   padding-left: 20px;
   color: gray;
   display: flex;
@@ -188,14 +177,11 @@ div.pp1 p {
 
 div.pack {
   width: 100%;
-  /* border: 1px solid blue; */
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   margin: 0 auto;
-  /* overflow: hidden; */
-  /* padding: 20px; */
 }
 
 div.pack img {
@@ -210,8 +196,8 @@ div.pack img:hover {
 div.package2 {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 div.package2 img {
@@ -224,26 +210,23 @@ div.package2 a {
 }
 
 div.package2 a h1 {
-  /* color: white; */
   font-size: 22px;
-  vertical-align: middle;
   width: 350px;
   color: white;
-  /* border: 1px solid pink; */
+  vertical-align: middle;
 }
 
 div.package2 p {
   width: 350px;
   color: white;
-  /* border:1px solid pink; */
   word-break: break-all;
 }
 
 div.package3 {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 div.package3 img {
@@ -257,17 +240,93 @@ div.package3 a {
 }
 
 div.package3 a h1 {
-  /* color: white; */
   font-size: 22px;
   width: 350px;
   color: white;
-  /* border: 1px solid pink; */
 }
 
 div.package3 p {
   width: 350px;
   color: white;
-  /* border: 1px solid pink; */
+  word-break: break-all;
+}
+
+div.pack2 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+div.pack2 img {
+  transition: all 0.5s ease-out;
+}
+
+div.pack2 img:hover {
+  top: -5%;
+  transform: scale(1.2, 1.2);
+}
+
+div.package4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+div.package4 img {
+  border-radius: 50%;
+  max-width: 350px;
+}
+
+div.package4 a {
+  text-decoration: none;
+}
+
+div.package4 a h1 {
+  width: 350px;
+  text-transform: uppercase;
+  font-size: 22px;
+  color: white;
+  vertical-align: middle;
+}
+
+div.package4 p {
+  width: 350px;
+  color: white;
+  word-break: break-all;
+}
+
+div.package5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+div.package5 img {
+  border-radius: 50%;
+  min-width: 350px;
+  max-height: 147px;
+}
+
+div.package5 a {
+  text-decoration: none;
+}
+
+div.package5 a h1 {
+  text-transform: uppercase;
+  font-size: 22px;
+  width: 350px;
+  color: white;
+}
+
+div.package5 p {
+  width: 350px;
+  color: white;
   word-break: break-all;
 }
 
@@ -276,7 +335,6 @@ div.title1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid pink; */
   margin-top: 50px;
   margin: 0 auto;
 }
@@ -287,15 +345,12 @@ h1.t2 {
 }
 
 div.bt {
-  /* border:1px solid blue; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
   padding-top: 50px;
-  /* padding:20px; */
-  /* padding-bottom:80px; */
 }
 
 div.bt #bt1 {
@@ -318,7 +373,6 @@ div.bt #bt1:hover {
 p.fin {
   color: lightgray;
   margin: 0;
-  /* border: 1px solid blue; */
   width: 100%;
   font-size: 1.2rem;
 }
