@@ -940,11 +940,9 @@ div.card-container {
 }
 
 .cover {
-  background-image: url("/pic/p1.png");
-  background-repeat: no-repeat;
   background-size: 60vh;
-  transform: rotateY(0deg);
   color: white;
+  transform: rotateY(0deg);
 }
 
 .card-container:hover .cover {
@@ -959,98 +957,28 @@ div.card-container {
 
 .back h1,
 p {
-  display: flex;
-  flex-direction: column;
-  font-size: 1.2rem;
-}
-
-.back2 h1,
-p {
-  font-size: 1.2rem;
-}
-
-.back3 h1,
-p {
   font-size: 1.2rem;
 }
 
 .card-container:hover .back {
   transform: rotatey(0deg);
 }
-.cover2,
-.back2 {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  backface-visibility: hidden;
-  transition: transform 0.25s ease-in-out;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
-  border-radius: 10px;
-  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.18);
-  text-shadow: 0 0.15rem 0.2rem rgba(0, 0, 0, 0.125);
-}
 
 .cover2 {
-  background-image: url("https://data1.ibtimes.co.in/en/full/623885/westworld.jpg");
-  background-repeat: no-repeat;
   background-size: cover;
   transform: rotateY(0deg);
-  color: white;
 }
 
 .card-container:hover .cover2 {
   transform: rotatey(180deg);
 }
 
-.back2 {
-  transform: rotateY(0deg);
-  color: white;
-  transform: rotatey(-180deg);
-}
-
-.card-container:hover .back2 {
-  transform: rotatey(0deg);
-}
-
-.cover3,
-.back3 {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  backface-visibility: hidden;
-  transition: transform 0.25s ease-in-out;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
-  border-radius: 10px;
-  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.18);
-  text-shadow: 0 0.15rem 0.2rem rgba(0, 0, 0, 0.125);
-}
-
 .cover3 {
-  background-image: url("/pic/p2.png");
-  background-repeat: no-repeat;
-  background-size: 65vh;
   transform: rotateY(0deg);
-  color: white;
 }
 
 .card-container:hover .cover3 {
   transform: rotatey(180deg);
-}
-
-.back3 {
-  transform: rotateY(0deg);
-  color: white;
-  transform: rotatey(-180deg);
-}
-
-.card-container:hover .back3 {
-  transform: rotatey(0deg);
 }
 
 /*    以上首頁第五頁 page5      */
