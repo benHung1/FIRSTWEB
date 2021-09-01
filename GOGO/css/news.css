@@ -11,7 +11,6 @@ nav.nav {
   margin: 0px auto;
   position: relative;
   top: 0;
-  width: 100%;
   background: #000;
 }
 
@@ -117,7 +116,6 @@ h1.t1 {
 }
 
 div.container {
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -176,7 +174,6 @@ div.pp1 p {
 }
 
 div.pack {
-  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -252,7 +249,6 @@ div.package3 p {
 }
 
 div.pack2 {
-  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -351,6 +347,7 @@ div.bt {
   align-items: center;
   margin: 0 auto;
   padding-top: 50px;
+  margin-bottom: 50px;
 }
 
 div.bt #bt1 {
@@ -370,19 +367,22 @@ div.bt #bt1:hover {
   transform: scale(1.2);
 }
 
+footer {
+  display: block;
+  margin: 0 auto;
+}
+
 p.fin {
   color: lightgray;
   margin: 0;
-  width: 100%;
   font-size: 1.2rem;
-}
-
-p.lilili {
-  margin-top: 30px;
-  border: 2px solid gray;
+  border-bottom: 2px solid gray;
+  padding-bottom: 20px;
 }
 
 p.si {
+  margin-top: 20px;
+  width: 100%;
   color: pink;
   font-size: 1.2rem;
 }
