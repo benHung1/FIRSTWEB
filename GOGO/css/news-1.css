@@ -134,7 +134,7 @@ p.mid {
   line-height: 25px;
 }
 
-a.mid {
+a.back {
   display: flex;
   flex-direction: column;
   justify-content: center;
