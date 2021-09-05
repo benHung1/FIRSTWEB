@@ -16,17 +16,37 @@
 
 </head>
 <body>
+
+    <button type="button" class="btn_switch"><i class="fas fa-bars"></i></button>
+
+    <nav class="nav">
+        <ul class="list">
+            <li>
+                <a class="log" href="http://127.0.0.1:5500/GOGO/Index.html"target="_blank">
+                    <img class="logo" src="../pic/cc.jpg" alt="error">
+                </a>
+                <a href="http://127.0.0.1:5500/GOGO/NEWS.html" style="color:lightsalmon;"target="_blank">News</a>
+                <a href="http://127.0.0.1:5500/GOGO/ABOUT.html"target="_blank">About</a>
+                <a href="http://127.0.0.1:5500/GOGO/EXPERIENCE.html"target="_blank">Experience</a>
+                <a href="http://127.0.0.1:5500/GOGO/EXPLORE.html"target="_blank">Explore</a>
+                <a href="http://127.0.0.1:5500/GOGO/EXHIBITION.html"target="_blank">Exhibition</a>
+                <a href="http://127.0.0.1:5500/GOGO/Index.html"target="_blank">Access</a>
+            </li>
+        </ul>
+
+    </nav>
+
     <div class="top">
         <h1>Tech Tent | AI write a play </h1>
         <img src="https://m.media-amazon.com/images/M/MV5BZTY4YWM4YzUtZWI3Yy00NjY5LWFkMTItMTJlZGU5NDMyYjU4XkEyXkFqcGdeQXVyMTIwODk1NTQ@._V1_FMjpg_UX720_.jpg" alt="">
-        <P>London's Young Vic theatre staged a fascinating experiment this week. It attempted over three nights to get GPT-3, an AI natural language system that has gobbled up vast amounts of text from the web, to write a play.
+        <p class="mid">London's Young Vic theatre staged a fascinating experiment this week. It attempted over three nights to get GPT-3, an AI natural language system that has gobbled up vast amounts of text from the web, to write a play.
 
             It was not meant to do this alone. This was a collaborative exercise involving human writers Chinonyerem Odimba and Nina Segal, three actors, and director Jennifer Tang.
             
             When I went along on the second night, she was guiding her team and the audience through the process, demonstrating how GPT-3 worked by getting it to undertake tasks set by us - such as "make up a Shakespeare sonnet in the style of a reality TV star".
             
-            They then set about building on a few scenes the AI had written the previous night, prompting it to build on a scenario involving characters called "Beastman" and "Beastwoman" who appeared to be in a post-apocalyptic world.</P>
-        <a href="https://benhung1.github.io/FIRSTWEB/GOGO/news-1.html">GO Back To News</a>    
+            They then set about building on a few scenes the AI had written the previous night, prompting it to build on a scenario involving characters called "Beastman" and "Beastwoman" who appeared to be in a post-apocalyptic world.</p>
+        <a class="mid" href="https://benhung1.github.io/FIRSTWEB/GOGO/news.html">GO Back To News</a>    
     </div>
 
     <footer>
@@ -34,5 +54,15 @@
         <p class="si">This website is the 69th special work of the students of the TibaMe front-end design engineer class of Weiyu TibaMe. This platform is for learning and display purposes only. If you have concerns about infringement, you can send a
             private message to [TibaMe-Front-end Design Engineer Training Class], and the follow-up will be handled by a dedicated person.</p>
     </footer> 
+    
+    <script>
+        $(function(){
+                // 點擊按鈕，選單縮放
+                $("button.btn_switch").on("click", function(){
+                $("nav.nav").slideToggle();
+            });
+        });
+    </script>        
+
 </body>
 </html>

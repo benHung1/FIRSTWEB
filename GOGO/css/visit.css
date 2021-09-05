@@ -5,41 +5,132 @@ body {
   margin: 0 auto;
 }
 
+nav.nav {
+  display: block;
+  padding: 0px;
+  margin: 0px auto;
+  position: relative;
+  top: 0;
+  background: #000;
+}
+
+@media screen and (min-width: 768px) {
+  nav.nav {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  nav.nav {
+    display: none;
+  }
+}
+
+ul.list {
+  padding: 0;
+  margin: 0;
+}
+
+ul.list > li {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  ul.list > li {
+    display: block;
+  }
+}
+
+button.btn_switch {
+  display: none;
+}
+/* 行動版時，將按鈕顯示出來 */
+@media screen and (max-width: 767px) {
+  button.btn_switch {
+    display: inline-block;
+    margin: 20px;
+  }
+}
+
+ul.list > li > a {
+  padding: 10px;
+  color: yellow;
+  font-size: 1.2rem;
+  text-decoration: none;
+  text-align: 10px center;
+  margin-right: 50px;
+}
+
+@media (max-width: 767px) {
+  ul.list > li > a {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+ul.list > li > a:hover {
+  transform: scale(1.2, 1.2);
+  color: lightsalmon;
+  transition: all 0.1s ease-in-out;
+}
+
+@media (max-width: 767px) {
+  ul.list > li > a:hover {
+    transform: scale(1, 1);
+  }
+}
+
+button.btn_switch {
+  font-size: 1.5rem;
+}
+
+a.log > img.logo {
+  width: 60px;
+  height: 41.95px;
+}
+
+@media (max-width: 767px) {
+  a.log {
+    position: absolute;
+    visibility: hidden;
+  }
+}
+
 div.visit {
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 50px;
 }
 
 video {
-  width: 80vw;
+  width: 70vw;
   margin: 0 auto;
 }
 
 div.content {
-  /* border:1px solid red; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 100px;
 }
 
-div.content h2 {
+h2 {
   letter-spacing: 2px;
   color: white;
   font-size: 1.2rem;
   text-align: center;
 }
 
-div.content span {
+span {
   color: gray;
 }
 
-div.content a.next {
+a.next {
   list-style: none;
   color: gray;
   border: 2px solid rgb(161, 155, 155);
@@ -59,4 +150,25 @@ a.back {
   letter-spacing: 2px;
   margin: 0 auto;
   border: 2px solid gray;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+p.fin {
+  padding-bottom: 20px;
+  color: lightgray;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+p.si {
+  margin: 0;
+  border-top: 2px solid gray;
+  padding-top: 20px;
+  color: pink;
+  font-size: 1.2rem;
 }

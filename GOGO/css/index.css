@@ -1156,7 +1156,6 @@ button.bb:hover {
 }
 
 div.final {
-  /* border: 1px solid red; */
   display: flex;
   margin-top: 100px;
   margin-right: auto;
@@ -1172,13 +1171,13 @@ a > i {
 p.fin {
   color: lightgray;
   margin: 0;
-  width: 100%;
   font-size: 1.2rem;
-  border-bottom: 2px solid gray;
-  padding-bottom: 20px;
 }
 
 p.si {
+  margin: 0;
+  border-top: 2px solid gray;
+  padding-top: 20px;
   margin-top: 20px;
   color: pink;
   font-size: 1.2rem;

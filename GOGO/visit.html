@@ -9,15 +9,56 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/visit.css">
+    <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"rel = "stylesheet">
+    <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="https://kit.fontawesome.com/8988cd1b75.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
+    
+    <button type="button" class="btn_switch"><i class="fas fa-bars"></i></button>
+    <nav class="nav">
+        <ul class="list">
+            <li>
+                <a class="log" href="http://127.0.0.1:5500/GOGO/Index.html"target="_blank">
+                    <img class="logo" src="../pic/cc.jpg" alt="error">
+                </a>
+                <a href="http://127.0.0.1:5500/GOGO/NEWS.html"target="_blank">News</a>
+                <a href="http://127.0.0.1:5500/GOGO/ABOUT.html"target="_blank">About</a>
+                <a href="http://127.0.0.1:5500/GOGO/EXPERIENCE.html"target="_blank">Experience</a>
+                <a href="http://127.0.0.1:5500/GOGO/EXPLORE.html"target="_blank">Explore</a>
+                <a href="http://127.0.0.1:5500/GOGO/EXHIBITION.html"target="_blank">Exhibition</a>
+                <a href="http://127.0.0.1:5500/GOGO/Index.html"target="_blank">Access</a>
+            </li>
+        </ul>
+
+    </nav>
+
     <div class="visit">
-        <a href="https://benhung1.github.io/FIRSTWEB/GOGO/Index.html" class="back">GO BACK</a>
+        <h2>THANK YOU. <br><span>THIS IS ONLY THE BEGINNING.</span></h2>
+        <a href="" class="next">BEGIN ASSESSMENT</a>
         <video src="../visit.mp4" muted loop autoplay playsinline></video>
         <div class="content">
-            <h2>THANK YOU. <br><span>THIS IS ONLY THE BEGINNING.</span></h2>
-            <a href="" class="next">BEGIN ASSESSMENT</a>
+            <a href="https://benhung1.github.io/FIRSTWEB/GOGO/Index.html" class="back">GO BACK</a>
         </div>
     </div>
+
+    <footer>
+        <p class="fin">AN INCITE COMPANY ™© <br> INCTERMS OF USEPRIVACY POLICY | DO NOT SELL MY PERSONAL INFORMATION</p>
+        <p class="si">This website is the 69th special work of the students of the TibaMe front-end design engineer class of Weiyu TibaMe. This platform is for learning and display purposes only. If you have concerns about infringement, you can send a
+            private message to [TibaMe-Front-end Design Engineer Training Class], and the follow-up will be handled by a dedicated person.</p>
+    </footer> 
+
+
+    <script>
+        $(function(){
+                // 點擊按鈕，選單縮放
+                $("button.btn_switch").on("click", function(){
+                $("nav.nav").slideToggle();
+            });
+        });
+    </script>        
+
 </body>
 </html>
