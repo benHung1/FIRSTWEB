@@ -4,429 +4,85 @@
 <head>
     <meta charset="utf-8">
     <title>Experience</title>
-    <style media="screen">
-        @font-face {
-            font-family: "Abel";
-            src: local("Abel-Regular.ttf"),
-                url("Abel-Regular.woff"),
-                url("Abel-Regular.woff2");
-            font-weight: normal;
-            font-style: normal;
-            font-display: swap;
-        }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/experience.css">
+    <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"rel = "stylesheet">
+    <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="https://kit.fontawesome.com/8988cd1b75.js" crossorigin="anonymous"></script>
 
-        body {
-            /* border:1px solid red; */
-            background-color: black;
-            font-family: 'Abel';
-            margin: 0 auto;
-            width:1200px;
-            box-sizing: border-box;
-        }
-        nav.nav {
-            /* border:1px solid red; */
-            display: flex;
-            justify-content: center;
-            position: relative;
-            margin: 0 auto;
-            z-index: 2;
-            width: 1200px;
-        }
-
-        ul.list {
-            /* border:1px solid pink; */
-            list-style: none;
-            justify-content: center;
-            display: flex;
-            padding: 10px;
-            margin: 0 auto;
-            background-color: black;
-        }
-
-        li>a {
-            /* border:1px solid blue; */
-            margin-right: 40px;
-            color: yellow;
-            font-size: 1.2rem;
-            text-decoration: none;
-            padding: 10px;
-            vertical-align: middle;
-        }
-
-        li>a>img {
-            width: 60px;
-            /* border:1px solid blue; */
-            vertical-align: middle;
-        }
-
-        div.top {
-            /* border:1px solid pink; */
-            letter-spacing: 2px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 1200px;
-            margin: 0 auto;
-            /* margin-top:50px; */
-        }
-
-        div.top h1 {
-            font-size: 3rem;
-            padding: 10px;
-            color: yellow;
-            display: flex;
-            flex-direction: column;
-        }
-
-        div.sli {
-            /* margin-top:50px; */
-            /* border:1px solid red; */
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: flex-start;
-            width:1200px;
-        }
-
-        ul.slides {
-            /* border-radius:30px; */
-            position: relative;
-            width: 1200px;
-            height: 750px;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            background-color: #eee;
-            overflow: hidden;
-        }
-
-        li.slide {
-            /* border:1px solid red; */
-            margin: 0;
-            padding: 0;
-            width: inherit;
-            height: inherit;
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Helvetica;
-            font-size: 120px;
-            color: #fff;
-            transition: .5s transform ease-in-out;
-            font-size: 3rem;
-            color: orange;
-
-        }
-
-        li.slide h1{
-            width:800px;
-        }
-
-        .slide:nth-of-type(1) {
-            background-image: url("https://m.media-amazon.com/images/M/MV5BODA5ZmIwOWItYzMxYy00OGMzLWI1Y2ItNTkxYzJmZWY3YzZhXkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_FMjpg_UX1280_.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-
-        }
-
-        .slide:nth-of-type(2) {
-            background-image: url("https://m.media-amazon.com/images/M/MV5BOThiYzM0YzQtOTZmOS00NjBlLWE5NjAtNGZlM2EwYzRjNmJkXkEyXkFqcGdeQXVyODc5MTI0NjU@._V1_FMjpg_UX1280_.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            left: 100%;
-        }
-
-        .slide:nth-of-type(3) {
-            background-image: url("https://m.media-amazon.com/images/M/MV5BZGIxODg2MTQtMTZiMy00ZjY5LWEwMWEtMGVhMGRlOTk1YWQ4XkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_FMjpg_UX1280_.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            left: 200%;
-        }
-
-        input[type="radio"] {
-            position: relative;
-            z-index: 100;
-            display: none;
-        }
-
-        .controls-visible {
-            position: absolute;
-            width: 100%;
-            bottom: 12px;
-            text-align: center;
-        }
-
-        .controls-visible label {
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            background-color: #fff;
-            border-radius: 50%;
-            margin: 0 3px;
-            border: 2px solid #fff;
-        }
-
-        .slides input[type="radio"]:nth-of-type(1):checked~.controls-visible label:nth-of-type(1) {
-            background-color: #333;
-        }
-
-        .slides input[type="radio"]:nth-of-type(2):checked~.controls-visible label:nth-of-type(2) {
-            background-color: #333;
-        }
-
-        .slides input[type="radio"]:nth-of-type(3):checked~.controls-visible label:nth-of-type(3) {
-            background-color: #333;
-        }
-
-        .slides input[type="radio"]:nth-of-type(1):checked~.slide {
-            transform: translatex(0%);
-        }
-
-        .slides input[type="radio"]:nth-of-type(2):checked~.slide {
-            transform: translatex(-100%);
-        }
-
-        .slides input[type="radio"]:nth-of-type(3):checked~.slide {
-            transform: translatex(-200%);
-        }
-
-
-        /* Left/Right Button Classes Below */
-
-        .navigator {
-            position: absolute;
-            top: 50%;
-            transform: translatey(-50%);
-            width: 100%;
-            z-index: 1000;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            box-sizing: border-box;
-            display: none;
-        }
-
-        .navigator i {
-            font-size: 32px;
-            color: #333;
-        }
-
-        .slides input[type="radio"]:nth-of-type(1):checked~.navigator:nth-of-type(1) {
-            display: flex;
-        }
-
-        .slides input[type="radio"]:nth-of-type(2):checked~.navigator:nth-of-type(2) {
-            display: flex;
-        }
-
-        .slides input[type="radio"]:nth-of-type(3):checked~.navigator:nth-of-type(3) {
-            display: flex;
-        }
-
-        div.mid {
-            /* border:1px solid pink; */
-            letter-spacing: 2px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            width: 1200px;
-            /* margin: 0 auto; */
-            margin-top: 50px;
-        }
-
-        div.mid h1 {
-            /* border:1px solid pink; */
-            font-size: 3rem;
-            padding: 10px;
-            color: yellow;
-            display: flex;
-            flex-direction: column;
-        }
-
-
-        div.con1 {
-            /* border:1px solid pink; */
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            width: 1200px;
-            justify-content: center;
-            align-items: center;
-            margin: 0 auto;
-        }
-
-        article.card {
-            border: 1px solid rgba(0, 0, 0, .125);
-            border-radius: 20px;
-            overflow: hidden;
-            margin: 0 auto;
-            /* margin-top: 30px; */
-            /* border:1px solid red; */
-        }
-
-        article.card a.img_block {
-            /* border:1px solid red; */
-            display: block;
-            font-size: 0;
-        }
-
-        article.card a.img_block>img {
-            /* border:1px solid red; */
-            max-width: 330px;
-            min-height: 220px;
-        }
-
-        article.card div.content_block {
-            /* border:1px solid green; */
-            padding: 20px 0 20px 0px;
-            margin-bottom:50px;
-            width:300px;
-        }
-
-        article.card h1 {
-            color: white;
-            margin: 0 0 5px 0;
-            font-size: 1.2rem;
-        }
-
-        article.card p {
-            color: white;
-            font-size: 1rem;
-            margin: 0;
-        }
-
-        a.last {
-            /* padding-right:50px; */
-            /* border:1px solid blue; */
-            width: 1200px;
-            height: 100px;
-            color: blue;
-            text-decoration: none;
-            display: block;
-            margin: 0 auto;
-        }
-
-        a.last h1 {
-            /* border:1px solid blue; */
-            padding: 20px;
-            text-align: right;
-
-        }
-
-        p.fin {
-            color: lightgray;
-            /* border:1px solid blue; */
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
-            width: 1400px;
-            /* margin:0 auto; */
-            margin-top: 100px;
-        }
-
-        p.lilili {
-            margin-top: 30px;
-            border: 2px solid gray;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
-            width: 1200px;
-            /* margin:0 auto; */
-        }
-
-        p.si {
-            padding: 10px;
-            color: pink;
-        }
-
-
-    </style>
 </head>
 
-<body>
+    <body>
 
-    <nav class="nav">
-        <ul class="list">
-            <li>
-                <a class="log" href="http://127.0.0.1:5500/GOGO/Index.html"target="_blank">
-                    <img class="logo" src="../pic/cc.jpg" alt="error">
-                </a>
-                <a href="http://127.0.0.1:5500/GOGO/NEWS.html" target="_blank">News</a>
-                <a href="http://127.0.0.1:5500/GOGO/ABOUT.html"target="_blank">About</a>
-                <a href="http://127.0.0.1:5500/GOGO/EXPERIENCE.html"target="_blank"style="color:lightsalmon;">Experience</a>
-                <a href="http://127.0.0.1:5500/GOGO/EXPLORE.html"target="_blank" >Explore</a>
-                <a href="http://127.0.0.1:5500/GOGO/EXHIBITION.html"target="_blank">Exhibition</a>
-                <a href="http://127.0.0.1:5500/GOGO/Index.html"target="_blank">Access</a>
-            </li>
-        </ul>
-    </nav>
+        <button type="button" class="btn_switch"><i class="fas fa-bars"></i></button>
 
-    <div class="top">
-        <h1>VIP Experience</h1>
-    </div>
+        <nav class="nav">
+            <ul class="list">
+                <li>
+                    <a class="log" href="https://benhung1.github.io/FIRSTWEB/GOGO/Index.html"target="_blank">
+                        <img class="logo" src="../pic/cc.jpg" alt="error">
+                    </a>
+                    <a href="https://benhung1.github.io/FIRSTWEB/GOGO/NEWS.html" target="_blank" >News</a>
+                    <a href="https://benhung1.github.io/FIRSTWEB/GOGO/ABOUT.html"target="_blank">About</a>
+                    <a href="https://benhung1.github.io/FIRSTWEB/GOGO/EXPERIENCE.html"target="_blank"style="color:lightsalmon;">Experience</a>
+                    <a href="https://benhung1.github.io/FIRSTWEB/GOGO/EXPLORE.html"target="_blank">Explore</a>
+                    <a href="https://benhung1.github.io/FIRSTWEB/GOGO/EXHIBITION.html"target="_blank">Exhibition</a>
+                    <a href="https://benhung1.github.io/FIRSTWEB/GOGO/Index.html"target="_blank">Access</a>
+    
+                </li>
+            </ul>
 
-    <div class="sli">
-        <ul class="slides">
-            <input type="radio" id="control-1" name="control" checked>
-            <input type="radio" id="control-2" name="control">
-            <input type="radio" id="control-3" name="control">
-
-            <!--  Left/Right Button  -->
-            <div class="navigator slide-1">
-                <label for="control-3">
-                    <i class="fas fa-chevron-left"></i>
-                </label>
-                <label for="control-2">
-                    <i class="fas fa-chevron-right"></i>
-                </label>
+        </nav>
+    
+        <div class="slider">
+            <div class="slide_viewer">
+              <div class="slide_group">
+                <div class="slide">
+                </div>
+                <div class="slide">
+                </div>
+                <div class="slide">
+                </div>
+                <div class="slide">
+                </div>
+              </div>
             </div>
-
-            <div class="navigator slide-2">
-                <label for="control-1">
-                    <i class="fas fa-chevron-left"></i>
-                </label>
-                <label for="control-3">
-                    <i class="fas fa-chevron-right"></i>
-                </label>
+          </div><!-- End // .slider -->
+          
+          <div class="slide_buttons">
+          </div>
+          
+          <div class="directional_nav">
+            <div class="previous_btn" title="Previous">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="65px" height="65px" viewBox="-11 -11.5 65 66">
+                <g>
+                  <g>
+                    <path fill="#474544" d="M-10.5,22.118C-10.5,4.132,4.133-10.5,22.118-10.5S54.736,4.132,54.736,22.118
+                      c0,17.985-14.633,32.618-32.618,32.618S-10.5,40.103-10.5,22.118z M-8.288,22.118c0,16.766,13.639,30.406,30.406,30.406 c16.765,0,30.405-13.641,30.405-30.406c0-16.766-13.641-30.406-30.405-30.406C5.35-8.288-8.288,5.352-8.288,22.118z"/>
+                    <path fill="#474544" d="M25.43,33.243L14.628,22.429c-0.433-0.432-0.433-1.132,0-1.564L25.43,10.051c0.432-0.432,1.132-0.432,1.563,0	c0.431,0.431,0.431,1.132,0,1.564L16.972,21.647l10.021,10.035c0.432,0.433,0.432,1.134,0,1.564	c-0.215,0.218-0.498,0.323-0.78,0.323C25.929,33.569,25.646,33.464,25.43,33.243z"/>
+                  </g>
+                </g>
+              </svg>
             </div>
-
-            <div class="navigator slide-3">
-                <label for="control-2">
-                    <i class="fas fa-chevron-left"></i>
-                </label>
-                <label for="control-1">
-                    <i class="fas fa-chevron-right"></i>
-                </label>
+            <div class="next_btn" title="Next">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="65px" height="65px" viewBox="-11 -11.5 65 66">
+                <g>
+                  <g>
+                    <path fill="#474544" d="M22.118,54.736C4.132,54.736-10.5,40.103-10.5,22.118C-10.5,4.132,4.132-10.5,22.118-10.5	c17.985,0,32.618,14.632,32.618,32.618C54.736,40.103,40.103,54.736,22.118,54.736z M22.118-8.288	c-16.765,0-30.406,13.64-30.406,30.406c0,16.766,13.641,30.406,30.406,30.406c16.768,0,30.406-13.641,30.406-30.406 C52.524,5.352,38.885-8.288,22.118-8.288z"/>
+                    <path fill="#474544" d="M18.022,33.569c 0.282,0-0.566-0.105-0.781-0.323c-0.432-0.431-0.432-1.132,0-1.564l10.022-10.035 			L17.241,11.615c 0.431-0.432-0.431-1.133,0-1.564c0.432-0.432,1.132-0.432,1.564,0l10.803,10.814c0.433,0.432,0.433,1.132,0,1.564 L18.805,33.243C18.59,33.464,18.306,33.569,18.022,33.569z"/>
+                  </g>
+                </g>
+              </svg>
             </div>
-            <!--  /Left/Right Button  -->
-
-            <li class="slide">
-                <h1 style="font-size:1.5rem; ">NO RESERVATIONS AVAILABLENO</h1>
-            </li>
-
-            <li class="slide">
-                <h1 style="font-size:1.5rem; ">NO RESERVATIONS AVAILABLE</h1>
-            </li>
-
-            <li class="slide">
-                <h1 style="font-size:1.5rem; ">NO RESERVATIONS AVAILABLE</h1>
-            </li>
-
-            <div class="controls-visible">
-                <label for="control-1"></label>
-                <label for="control-2"></label>
-                <label for="control-3"></label>
-            </div>
-        </ul>
-    </div>
+          </div><!-- End // .directional_nav -->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        
 
     <div class="mid">
-        <h1>69 Things To Do...</h1>
+        <h1>15 Things To Do...</h1>
     </div>
 
 
@@ -437,10 +93,10 @@
             <a href="https://tw.yahoo.com/" target="_blank" class="img_block"><img src="https://m.media-amazon.com/images/M/MV5BMTUyNDg1NjU3N15BMl5BanBnXkFtZTgwNTY5Nzk5ODE@._V1_FMjpg_UX1280_.jpg"></a>
 
             <div class="content_block">
-
+                
                 <h1>Universal Studios Hollywood™ - Upper Lot</h1>
 
-                <p>Cletus’ Chicken Shack</p>
+                <p>Though Woody doesn't belong to an actual species, animator Walter Lantz was inspired to create him after a run-in with an acorn woodpecker.</p>
 
             </div>
 
@@ -452,23 +108,9 @@
 
             <div class="content_block">
 
-                <h1>Universal Studios Hollywood™ - Upper Lot</h1>
+                <h1>Woody Woodpecker's Nuthouse Coaster™</h1>
 
-                <p>Cletus’ Chicken ShackUniversal Studios Hollywood™ - Upper Lot</p>
-
-            </div>
-
-        </article>
-
-        <article class="card">
-
-            <a href="https://tw.yahoo.com/" target="_blank" class="img_block"><img src="https://m.media-amazon.com/images/M/MV5BMjQwMjY4MTYzNV5BMl5BanBnXkFtZTgwNzk4ODc4ODE@._V1_FMjpg_UX1280_.jpg"></a>
-
-            <div class="content_block">
-
-                <h1>Universal Studios Hollywood™ - Upper Lot</h1>
-
-                <p>Cletus’ Chicken Shack</p>
+                <p>All the fun of a classic coaster without any daredevil drops, it's a treat for little ones and grown-ups alike.</p>
 
             </div>
 
@@ -476,13 +118,13 @@
 
         <article class="card">
 
-            <a href="https://tw.yahoo.com/" target="_blank" class="img_block"><img src="https://m.media-amazon.com/images/M/MV5BY2Y1MTdjNjQtZTBiMS00YjAzLWI3NTItN2NiN2I0YzU4YWI0XkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_FMjpg_UX1280_.jpg"></a>
+            <a href="" target="_blank" class="img_block"><img src="https://m.media-amazon.com/images/M/MV5BMjQwMjY4MTYzNV5BMl5BanBnXkFtZTgwNzk4ODc4ODE@._V1_FMjpg_UX1280_.jpg"></a>
 
             <div class="content_block">
 
-                <h1>Universal Studios Hollywood™ - Upper Lot</h1>
+                <h1>Get RealTime Attraction Updates in the blogs</h1>
 
-                <p>Cletus’ Chicken Shack</p>
+                <p>This thrilling kid-friendly coaster gently swoops and turns through Woody's very own nut factory, filled with silly puns and corny jokes.</p>
 
             </div>
 
@@ -490,13 +132,13 @@
 
         <article class="card">
 
-            <a href="https://tw.yahoo.com/" target="_blank" class="img_block"><img src="https://m.media-amazon.com/images/M/MV5BYzYzN2I5NjktZTc2Yi00MDc4LTllYjEtYmViNGViNjAwNWU0XkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_FMjpg_UX1280_.jpg"></a>
+            <a href="" target="_blank" class="img_block"><img src="https://m.media-amazon.com/images/M/MV5BY2Y1MTdjNjQtZTBiMS00YjAzLWI3NTItN2NiN2I0YzU4YWI0XkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_FMjpg_UX1280_.jpg"></a>
 
             <div class="content_block">
 
-                <h1>Universal Studios Hollywood™ - Upper Lot</h1>
+                <h1>Dudley Do-Right's Ripsaw Falls®Plan to get loop</h1>
 
-                <p>Cletus’ Chicken Shack</p>
+                <p>Dudley Do-Right. As you approach a nail-biting 75-foot drop, get ready to whoosh down the track for the biggest splash of your life.</p>
 
             </div>
 
@@ -504,12 +146,13 @@
 
         <article class="card">
 
-            <a href="https://tw.yahoo.com/" target="_blank" class="img_block"><img src="https://m.media-amazon.com/images/M/MV5BNTQyYTM1NjUtZGY0Yy00OTM4LThhZGMtYmUwMDhkYThiMmYzXkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_FMjpg_UX1280_.jpg"></a>
+            <a href="" target="_blank" class="img_block"><img src="https://m.media-amazon.com/images/M/MV5BYzYzN2I5NjktZTc2Yi00MDc4LTllYjEtYmViNGViNjAwNWU0XkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_FMjpg_UX1280_.jpg"></a>
+
             <div class="content_block">
 
-                <h1>Universal Studios Hollywood™ - Upper Lot</h1>
+                <h1>Doctor Doom's Fearfall® Faster Than the Space Shuttle </h1>
 
-                <p>Cletus’ Chicken Shack</p>
+                <p>His henchmen will strap you into a seat, blast you into the sky and then—without a second to catch your breath—hurl you back down with a face-melting force stronger than gravity itself.</p>
 
             </div>
 
@@ -517,13 +160,26 @@
 
         <article class="card">
 
-            <a href="https://tw.yahoo.com/" target="_blank" class="img_block"><img src="https://m.media-amazon.com/images/M/MV5BMWU0ZWRjZWUtZDg2OS00ZGJhLTkyM2EtMjU5YmU2YWNjYzg0XkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_FMjpg_UX1280_.jpg"></a>
+            <a href="" target="_blank" class="img_block"><img src="https://m.media-amazon.com/images/M/MV5BNTQyYTM1NjUtZGY0Yy00OTM4LThhZGMtYmUwMDhkYThiMmYzXkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_FMjpg_UX1280_.jpg"></a>
+            <div class="content_block">
+
+                <h1>A Merry-Go-Round from the Mind of Dr. Seuss</h1>
+
+                <p>you’ll see Horton the Elephant carefully guarding his special dandelion and its microscopic inhabitants.</p>
+
+            </div>
+
+        </article>
+
+        <article class="card">
+
+            <a href="" target="_blank" class="img_block"><img src="https://m.media-amazon.com/images/M/MV5BMWU0ZWRjZWUtZDg2OS00ZGJhLTkyM2EtMjU5YmU2YWNjYzg0XkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_FMjpg_UX1280_.jpg"></a>
 
             <div class="content_block">
 
-                <h1>Universal Studios Hollywood™ - Upper Lot</h1>
+                <h1>Hagrid’s Magical Creatures Motorbike Adventure™</h1>
 
-                <p>Cletus’ Chicken Shack</p>
+                <p>Now’s the time to join Hagrid™ as you fly deep into the wilds of the Forbidden Forest, beyond the grounds of Hogwarts™ castle</p>
 
             </div>
 
@@ -532,13 +188,13 @@
 
         <article class="card">
 
-            <a href="https://tw.yahoo.com/" target="_blank" class="img_block"><img src="https://m.media-amazon.com/images/M/MV5BMjQ0NzI1OTQxOF5BMl5BanBnXkFtZTgwNDkwODk2ODE@._V1_FMjpg_UX1280_.jpg"></a>
+            <a href="" target="_blank" class="img_block"><img src="https://m.media-amazon.com/images/M/MV5BMjQ0NzI1OTQxOF5BMl5BanBnXkFtZTgwNDkwODk2ODE@._V1_FMjpg_UX1280_.jpg"></a>
 
             <div class="content_block">
 
-                <h1>Universal Studios Hollywood™ - Upper Lot</h1>
+                <h1>Wallpapers are Now Available for Download</h1>
 
-                <p>Cletus’ Chicken Shack</p>
+                <p>These one-of-a-kind poster designs were created by MinaLima –– the talented design studio behind all the graphic props in the Harry Potter films</p>
 
             </div>
 
@@ -546,13 +202,13 @@
 
         <article class="card">
 
-            <a href="https://tw.yahoo.com/" target="_blank" class="img_block"><img src="https://m.media-amazon.com/images/M/MV5BMTg3MjI0MDg5MF5BMl5BanBnXkFtZTgwNzQ4NjI3ODE@._V1_FMjpg_UX1280_.jpg"></a>
+            <a href="" target="_blank" class="img_block"><img src="https://m.media-amazon.com/images/M/MV5BMTg3MjI0MDg5MF5BMl5BanBnXkFtZTgwNzQ4NjI3ODE@._V1_FMjpg_UX1280_.jpg"></a>
 
             <div class="content_block">
 
-                <h1>Universal Studios Hollywood™ - Upper Lot</h1>
+                <h1>Soar Above Hogwarts™ With Harry Potter™</h1>
 
-                <p>Cletus’ Chicken Shack</p>
+                <p>Enter through the towering castle gates and make your way down the familiar passageways and corridors of Hogwarts™ School of Witchcraft and Wizardry. </p>
 
             </div>
 
@@ -563,15 +219,18 @@
 
     <a class="last" href="#">
         <h1>Show More +</h1>
+        <i class="fas fa-caret-square-up"></i>
     </a>
 
-    <p class="fin">AN INCITE COMPANY ™© <br> INCTERMS OF USEPRIVACY POLICY | DO NOT SELL MY PERSONAL INFORMATION</p>
-    <p class="lilili"></p>
-    <p class="si">This website is the 69th special work of the students of the TibaMe front-end design engineer class of Weiyu TibaMe. This platform is for learning and display purposes only. If you have concerns about infringement, you can send a
-        private message to [TibaMe-Front-end Design Engineer Training Class], and the follow-up will be handled by a dedicated person.</p>
+
+    <footer>
+        <p class="fin">AN INCITE COMPANY ™© <br> INCTERMS OF USEPRIVACY POLICY | DO NOT SELL MY PERSONAL INFORMATION</p>
+        <p class="si">This website is the 69th special work of the students of the TibaMe front-end design engineer class of Weiyu TibaMe. This platform is for learning and display purposes only. If you have concerns about infringement, you can send a
+            private message to [TibaMe-Front-end Design Engineer Training Class], and the follow-up will be handled by a dedicated person.</p>
+    </footer> 
 
 
-
+    <script src="./js/experience.js"></script>
 
 
 
