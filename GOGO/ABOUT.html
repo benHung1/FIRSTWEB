@@ -4,246 +4,63 @@
     <head>
         <meta charset="utf-8">
         <title>ABOUT</title>
-        <style media="screen">
-            @font-face {
-                font-family: "Abel";
-                src: local("Abel-Regular.ttf"),
-                    url("Abel-Regular.woff"),
-                    url("Abel-Regular.woff2");
-                font-weight: normal;
-                font-style: normal;
-                font-display: swap;
-            }
-
-            body {
-                /* border:1px solid red; */
-                background-color: black;
-                font-family: 'Abel';
-                margin: 0 auto;
-                width:1200px;
-                box-sizing: border-box;
-            }
-
-            nav.nav {
-                /* border:1px solid red; */
-                display: flex;
-                justify-content: center;
-                position: relative;
-                margin: 0 auto;
-                z-index: 2;
-                width: 1200px;
-            }
-
-            ul.list {
-                /* border:1px solid pink; */
-                list-style: none;
-                justify-content: center;
-                display: flex;
-                padding: 10px;
-                margin: 0 auto;
-                background-color: black;
-            }
-
-            li>a {
-                /* border:1px solid blue; */
-                margin-right: 40px;
-                color: yellow;
-                font-size: 1.2rem;
-                text-decoration: none;
-                padding: 10px;
-                vertical-align: middle;
-            }
-
-            li>a>img {
-                width: 60px;
-                /* border:1px solid blue; */
-                vertical-align: middle;
-            }
-
-            div.middle {
-                /* border:1px solid red; */
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: center;
-                width:1200px;
-                height:3500px;
-                margin:auto;
-                margin-top:30px;
-            }
-
-            ul.scroll {
-                /* border:1px solid green; */
-                position: relative;
-                width: 1200px;
-                height: 500px;
-                list-style: none;
-                margin: 0;
-                padding: 0;
-                background-color: #eee;
-            }
-
-            li.scr {
-                margin: 0;
-                padding: 0;
-                width: inherit;
-                height: inherit;
-                position: absolute;
-
-            }
-
-            .scr:nth-of-type(1) {
-                background-image: url("https://m.media-amazon.com/images/M/MV5BMjExODg2ODQyNl5BMl5BanBnXkFtZTgwOTgwNjcwODM@._V1_FMjpg_UX1280_.jpg");
-                background-repeat: no-repeat;
-                background-size: cover;
-                display:flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                /* border:1px solid red; */
-            }
-
-            p.line{
-                /* background-image: url("https://m.media-amazon.com/images/M/MV5BNGI0YmIwNGUtMDNiMC00M2ExLTk4MmEtZWEyYmQzNzhlMGIyXkEyXkFqcGdeQXVyMTIwODk1NTQ@._V1_FMjpg_UX1280_.jpg"); */
-                background-repeat: no-repeat;
-                background-size: cover;
-                border:2px solid gray;
-                width:200px;
-                margin-top:-15px;
-            }
-
-            .scr:nth-of-type(2) {
-                background-image: url("https://m.media-amazon.com/images/M/MV5BNGI0YmIwNGUtMDNiMC00M2ExLTk4MmEtZWEyYmQzNzhlMGIyXkEyXkFqcGdeQXVyMTIwODk1NTQ@._V1_FMjpg_UX1280_.jpg");
-                background-repeat: no-repeat;
-                background-size: cover;
-                top: 150%;
-                display:flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .scr:nth-of-type(3) {
-                background-image: url("https://m.media-amazon.com/images/M/MV5BNTAyNjU4NTAyMl5BMl5BanBnXkFtZTgwMzM5MTkyMzI@._V1_FMjpg_UX1280_.jpg");
-                background-repeat: no-repeat;
-                background-size: cover;
-                top: 300%;
-                display:flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .scr:nth-of-type(4) {
-                background-image: url("https://m.media-amazon.com/images/M/MV5BMjE1MTI2NTczNl5BMl5BanBnXkFtZTgwMDkyNzYwOTE@._V1_FMjpg_UX1280_.jpg");
-                background-repeat: no-repeat;
-                background-size: cover;
-                top: 450%;
-                display:flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-
-            }
-
-            .scr:nth-of-type(5) {
-                background-image: url("https://m.media-amazon.com/images/M/MV5BMzU2NzA4NzA1Nl5BMl5BanBnXkFtZTgwODkzNDEzMzI@._V1_FMjpg_UX1280_.jpg");
-                background-repeat: no-repeat;
-                background-size: cover;
-                top: 600%;
-                display:flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-
-            p.fin {
-                color: lightgray;
-                /* border:1px solid blue; */
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: flex-start;
-                width: 1200px;
-                /* margin:0 auto; */
-                margin-top: 100px;
-            }
-
-            p.lilili {
-                margin-top: 30px;
-                border: 2px solid gray;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: flex-start;
-                width: 1200px;
-                /* margin:0 auto; */
-            }
-
-            p.si {
-                padding: 10px;
-                color: pink;
-            }
-
-        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/about.css">
+        <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"rel = "stylesheet">
+        <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <script src="https://kit.fontawesome.com/8988cd1b75.js" crossorigin="anonymous"></script>
+    
     </head>
-
-    <body>
-        <nav class="nav">
-            <ul class="list">
-                <li>
-                    <a class="log" href="http://127.0.0.1:5500/GOGO/Index.html"target="_blank">
-                        <img class="logo" src="../pic/cc.jpg" alt="error">
-                    </a>
-                    <a href="http://127.0.0.1:5500/GOGO/NEWS.html" target="_blank">News</a>
-                    <a href="http://127.0.0.1:5500/GOGO/ABOUT.html"target="_blank"style="color:lightsalmon;">About</a>
-                    <a href="http://127.0.0.1:5500/GOGO/EXPERIENCE.html"target="_blank">Experience</a>
-                    <a href="http://127.0.0.1:5500/GOGO/EXPLORE.html"target="_blank" >Explore</a>
-                    <a href="http://127.0.0.1:5500/GOGO/EXHIBITION.html"target="_blank">Exhibition</a>
-                    <a href="http://127.0.0.1:5500/GOGO/Index.html"target="_blank">Access</a>
+    
+        <body>
+    
+            <button type="button" class="btn_switch"><i class="fas fa-bars"></i></button>
+    
+            <nav class="nav">
+                <ul class="list">
+                    <li>
+                        <a class="log" href="https://benhung1.github.io/FIRSTWEB/GOGO/Index.html"target="_blank">
+                            <img class="logo" src="../pic/cc.jpg" alt="error">
+                        </a>
+                        <a href="https://benhung1.github.io/FIRSTWEB/GOGO/NEWS.html" target="_blank" >News</a>
+                        <a href="https://benhung1.github.io/FIRSTWEB/GOGO/ABOUT.html"target="_blank"style="color:lightsalmon;">About</a>
+                        <a href="https://benhung1.github.io/FIRSTWEB/GOGO/EXPERIENCE.html"target="_blank">Experience</a>
+                        <a href="https://benhung1.github.io/FIRSTWEB/GOGO/EXPLORE.html"target="_blank">Explore</a>
+                        <a href="https://benhung1.github.io/FIRSTWEB/GOGO/EXHIBITION.html"target="_blank">Exhibition</a>
+                        <a href="https://benhung1.github.io/FIRSTWEB/GOGO/Index.html#footer"target="_blank">Access</a>
+        
                     </li>
-            </ul>
-        </nav>
-
-        <div class="middle">
-
-            <ul class="scroll">
-
-                <li class="scr">
-                    <h1 >NO RESERVATIONS AVAILABLE</h1>
-                    <p class="line"></p>
-                    <p>NO RESERVATIONS AVAILABLE</p>
-                </li>
-                <li class="scr">
-                    <h1>NO RESERVATIONS AVAILABLENO RESERVATIONS AVAILABLE</h1>
-                    <p class="line"></p>
-                    <p>NO RESERVATIONS AVAILABLE</p>
-                </li>
-                <li class="scr">
-                    <h1>NO RESERVATIONS AVAILABLE</h1>
-                    <p class="line"></p>
-                    <p>NO RESERVATIONS AVAILABLE</p>
-                </li>
-                <li class="scr">
-                    <h1>NO RESERVATIONS AVAILABLE</h1>
-                    <p class="line"></p>
-                    <p>NO RESERVATIONS AVAILABLE</p>
-                </li>
-                <li class="scr">
-                    <h1>NO RESERVATIONS AVAILABLE</h1>
-                    <p class="line"></p>
-                    <p>NO RESERVATIONS AVAILABLE</p>
-                </li>
-            </ul>
-        </div>
-
-            <p class="fin">AN INCITE COMPANY ™© <br> INCTERMS OF USEPRIVACY POLICY | DO NOT SELL MY PERSONAL INFORMATION</p>
-            <p class="lilili"></p>
-            <p class="si">This website is the 69th special work of the students of the TibaMe front-end design engineer class of Weiyu TibaMe. This platform is for learning and display purposes only. If you have concerns about infringement, you can send a
-                private message to [TibaMe-Front-end Design Engineer Training Class], and the follow-up will be handled by a dedicated person.</p>
+                </ul>
+    
+            </nav>
+    
 
 
+            <div class="scroll"></div>
+            <div id="fullpage">
+              <div class="section section1">
+                <h2 class="title">Some Uses For</h2>
+                <h1 class="title2">Rainbow Gradient Animations</h1>
+              </div>
+              <div class="section section2">
+                <nav class="navbar">Navigation Bars<img class="hamburger" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/551157/hamgurger.svg"/></nav>
+              </div>
+              <div class="section section3">
+                <h1 class="clip">Text Clips</h1>
+              </div>
+              <div class="section section4">
+                <div class="button"> <span>Hover Animations</span></div>
+              </div>
+              <div class="section section5">
+                <h2 class="conclude1">Now go forth and make the web</h2>
+                <h1 class="conclude2 clip">Fabulous</h1>
+              </div>
+            </div>
 
+    <script src="./js/about.js"></script>
     </body>
 
     </html>

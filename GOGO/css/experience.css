@@ -101,11 +101,11 @@ a.log > img.logo {
 
 .slider {
   margin: 0 auto;
-  max-width: 100vw;
+  width: 100%;
 }
 
 .slide_viewer {
-  height: 95vh;
+  height: 50vw;
   overflow: hidden;
   position: relative;
 }
@@ -134,25 +134,25 @@ img {
 
 .slide:nth-of-type(1) {
   background-image: url("https://m.media-amazon.com/images/M/MV5BODA5ZmIwOWItYzMxYy00OGMzLWI1Y2ItNTkxYzJmZWY3YzZhXkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_FMjpg_UX1280_.jpg");
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
 }
 
 .slide:nth-of-type(2) {
   background-image: url("https://m.media-amazon.com/images/M/MV5BYTkyOTVlZTUtMzZhMy00ZjFkLWI2YTYtYmM5N2Q2MmM4M2EwXkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_FMjpg_UX1280_.jpgjpg");
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
 }
 
 .slide:nth-of-type(3) {
   background-image: url("https://m.media-amazon.com/images/M/MV5BOTIwMjIzYzctNmRhOC00MTA3LTk4YWEtOTYxODg5N2U4ZGE4XkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_FMjpg_UX1280_.jpg");
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
 }
 
 .slide:nth-of-type(4) {
   background-image: url("https://m.media-amazon.com/images/M/MV5BZWIwNWY4ZTUtMDcxMC00M2YyLTk3YjItMWI0YjJmNmQyYTk1XkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_FMjpg_UX1280_.jpg");
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
 }
 

@@ -228,11 +228,11 @@ div.pack2 img:hover {
 
 div.package4 {
   width: 350px;
-  margin-right: 100px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  margin-right: 100px;
 }
 
 div.package4 img {
@@ -288,6 +288,7 @@ div.package5 p {
 }
 
 div.container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -301,9 +302,8 @@ img {
 }
 
 a img.show {
-  width: 330px;
+  width: 370px;
   min-height: 200px;
-  margin-right: 50px;
   border-radius: 10px;
   transition: all 0.5s ease-out;
 }
@@ -315,7 +315,7 @@ a img.show:hover {
 
 div.package1 {
   display: flex;
-  flex-direction: row;
+  flex-direction: ;
   justify-content: center;
   margin-bottom: 50px;
 }
@@ -325,7 +325,7 @@ div.pp1 a {
 }
 
 div.pp1 a h1.c1 {
-  width: 420px;
+  width: 400px;
   padding: 10px;
   color: white;
   display: flex;

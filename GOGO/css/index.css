@@ -1,6 +1,5 @@
 body {
   font-family: "Abel", sans-serif;
-  /* border:1px solid red; */
   box-sizing: border-box;
   background-color: black;
   width: 100%;
@@ -19,8 +18,7 @@ div.video_placeholder {
 
 @media screen and (max-width: 767px) {
   div.video_placeholder {
-    width: 100vw;
-    height: 100vw;
+    width: 100%;
   }
 }
 
@@ -101,8 +99,7 @@ ul.list > li > a {
 @media (max-width: 767px) {
   ul.list > li > a {
     /* border: 1px solid red; */
-    display: flex;
-    flex-direction: column;
+    display: block;
   }
 }
 
@@ -155,7 +152,7 @@ div.fir-end {
 
 @media (max-width: 767px) {
   div.fir-end {
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -212,7 +209,7 @@ div.other_contents {
 
 @media (max-width: 767px) {
   div.other_contents {
-    width: 100vw;
+    width: 100%;
     /* height: 100vh; */
   }
 }
@@ -339,7 +336,7 @@ div.pg2 {
 
 @media (max-width: 767px) {
   div.pg2 {
-    width: 100vw;
+    width: 100%;
   }
 }
 
@@ -649,7 +646,7 @@ article.card {
 
 @media screen and (max-width: 767px) {
   article.card {
-    width: 100vw;
+    width: 100%;
   }
 }
 
@@ -885,7 +882,6 @@ div.pr1 h1 {
 
 @media screen and (max-width: 767px) {
   div.pr1 {
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -914,11 +910,11 @@ div.card-box {
 
 @media screen and (max-width: 767px) {
   div.card-box {
-    width: 100vw;
-    display: flex;
+    display: block;
+    /* display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: flex-start; */
   }
 }
 
