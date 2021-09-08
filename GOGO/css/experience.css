@@ -182,11 +182,10 @@ a.slide_btn {
 }
 
 .directional_nav {
-  height: 340px;
   margin: 0 auto;
   max-width: 100%;
   position: relative;
-  top: -550px;
+  top: -500px;
 }
 
 .previous_btn {
@@ -244,6 +243,7 @@ div.mid {
   /* border: 1px solid pink; */
   letter-spacing: 2px;
   display: flex;
+  margin-top: 100px;
 }
 
 div.mid h1 {
