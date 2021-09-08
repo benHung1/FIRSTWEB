@@ -4,6 +4,7 @@ body {
   box-sizing: border-box;
   background-color: black;
   width: 100%;
+  margin: 0;
 }
 
 div.video_placeholder {
@@ -168,7 +169,17 @@ a.vi > h2 {
   color: gray;
   font-size: 1.5rem;
   margin: 0 auto;
-  opacity: 0.5;
+  animation-name: on-off;
+  animation: on-off 0.5s infinite;
+}
+
+@keyframes on-off {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 a.vi > h2:hover {
