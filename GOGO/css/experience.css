@@ -269,7 +269,6 @@ article.card {
   overflow: hidden;
   margin: 0 auto;
   margin-bottom: 30px;
-  border: 1px solid red;
   width: calc(100% / 4);
 }
 
