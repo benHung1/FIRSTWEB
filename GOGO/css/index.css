@@ -667,13 +667,6 @@ article.card h1 {
   }
 }
 
-article.card h1:hover {
-  cursor: pointer;
-  transform: scale(1.2, 1.2);
-  color: lightsalmon;
-  transition: all 0.1s ease-in-out;
-}
-
 div.t1-t2 {
   /* border: 1px solid red; */
   width: 100%;
@@ -873,7 +866,6 @@ div.pr1 {
 }
 
 div.pr1 h1 {
-  cursor: pointer;
   /* border: 1px solid red; */
   font-size: 2.5rem;
   color: yellow;
@@ -887,12 +879,6 @@ div.pr1 h1 {
     justify-content: center;
     align-items: center;
   }
-}
-
-div.pr1 h1:hover {
-  transform: scale(1.2, 1.2);
-  color: lightsalmon;
-  transition: all 0.1s ease-in-out;
 }
 
 h1.pr {
@@ -1017,13 +1003,6 @@ h1.ac {
   opacity: 0;
   transform: scale(0.1);
   transition: all 1s ease-in-out;
-}
-
-h1.ac:hover {
-  cursor: pointer;
-  transform: scale(1.2, 1.2) !important;
-  color: lightsalmon;
-  transition: all 0.1s ease-in-out;
 }
 
 h1.ac.active {

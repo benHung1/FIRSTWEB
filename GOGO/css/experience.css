@@ -240,7 +240,6 @@ img {
 }
 
 div.mid {
-  /* border: 1px solid pink; */
   letter-spacing: 2px;
   display: flex;
   margin-top: 100px;
@@ -260,7 +259,7 @@ div.con1 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 1200px;
+  /* width: 1200px; */
   margin: 0 auto;
 }
 
@@ -270,13 +269,14 @@ article.card {
   overflow: hidden;
   margin: 0 auto;
   margin-bottom: 30px;
-  /* border: 1px solid red; */
+  border: 1px solid red;
+  width: calc(100% / 4);
 }
 
 article.card a.img_block > img {
   /* border: 1px solid red; */
-  width: 330px;
-  height: 250px;
+  width: 100%;
+  max-height: 250px;
   transition: all 0.5s ease-in-out;
 }
 
@@ -288,7 +288,7 @@ article.card div.content_block {
   word-break: break-all;
   padding: 10px;
   margin-bottom: 50px;
-  width: 300px;
+  /* width: 300px; */
 }
 
 article.card h1 {
