@@ -158,26 +158,35 @@ section p {
 }
 
 #section01 {
+  object-fit: cover;
   opacity: 1;
   background: url("https://m.media-amazon.com/images/M/MV5BNWQ4ZTMyOGMtOGJmMi00MjkwLTk4YWQtODk1ODIwM2Q0NjgwXkEyXkFqcGdeQXVyNjgzMjQ0MTA@._V1_FMjpg_UX1260_.jpg")
     center center / cover no-repeat;
 }
 #section02 {
+  object-fit: cover;
+
   opacity: 0.9;
   background: url("https://m.media-amazon.com/images/M/MV5BZGQ2YTAyNTUtMTQ2MS00ZTczLWEzZjctNThmNTg0ODBiNTZlXkEyXkFqcGdeQXVyNjgzMjQ0MTA@._V1_FMjpg_UX1260_.jpg")
     center center / cover no-repeat;
 }
 #section03 {
+  object-fit: cover;
+
   opacity: 0.8;
   background: url("https://images3.alphacoders.com/935/thumb-1920-935377.jpg")
     center center / cover no-repeat;
 }
 #section04 {
+  object-fit: cover;
+
   opacity: 0.7;
   background: url("https://m.media-amazon.com/images/M/MV5BODkyZDJlNTUtYzVhYS00ZDRiLWExZjgtNmVmZTk0YWE1NDJlXkEyXkFqcGdeQXVyMTExMTI5Mzc1._V1_FMjpg_UX1280_.jpg")
     center center / cover no-repeat;
 }
 #section05 {
+  object-fit: cover;
+
   opacity: 0.6;
   background: url("https://m.media-amazon.com/images/M/MV5BYzdlMjc0NzMtNjA0OC00ZTgxLWFiYmQtYWE5N2NmODVmNzljXkEyXkFqcGdeQXVyNTc3NTEzMDU@._V1_FMjpg_UX1280_.jpg")
     center center / cover no-repeat;
@@ -216,6 +225,20 @@ section p {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   box-sizing: border-box;
+}
+
+a.bt-top {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 5%;
+}
+
+a > i {
+  font-size: 4rem;
+  color: white;
 }
 
 footer {
