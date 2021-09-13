@@ -10,85 +10,97 @@
     <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <script src="https://kit.fontawesome.com/8988cd1b75.js" crossorigin="anonymous"></script>
-
     <style>
-        
- 
+* {
+  box-sizing: border-box;
+}
 
+body {
+  background: #000 url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/341817/forest-free-wallpaper-hd-wallpaper-1657959.jpg) no-repeat center 0%/cover;
+  transition: background-position 0.3s ease-in-out;
+}
+body.fp-viewing-0 {
+  background-position: center 0%;
+}
+body.fp-viewing-1 {
+  background-position: center 50%;
+}
+body.fp-viewing-2 {
+  background-position: center 100%;
+}
 
-      </style>
-</head>
+.one,
+.three {
+  background: linear-gradient(-45deg, transparent 25%, rgba(0, 0, 0, 0.7) 25%, rgba(0, 0, 0, 0.7) 75%, transparent 75%, transparent 100%);
+}
+
+.two {
+  background: linear-gradient(45deg, transparent 25%, rgba(0, 0, 0, 0.7) 25%, rgba(0, 0, 0, 0.7) 75%, transparent 75%, transparent 100%);
+  text-align: right;
+}
+
+h1,
+h2 {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 58px;
+  height: 64px;
+  line-height: 3.5;
+  max-width: 830px;
+  padding: 0 15px;
+  margin: 0 auto;
+  overflow: hidden;
+  transition: line-height 0.85s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+h1 {
+  font-weight: 100;
+  transition-delay: 0.3s;
+}
+
+h2 {
+  font-weight: 300;
+  transition-delay: 0.8s;
+}
+
+.section.active h1,
+.section.active h2 {
+  line-height: 1;
+}</style>
+  </head>
 <body>
-    <h1>3D Gallery</h1>
-<div class="container">
-  <i class="fas fa-chevron-circle-left" id="prev"></i>
-  <i class="fas fa-chevron-circle-right" id="next"></i>
-  <div class="card position1" id="card1">
-    <img src="https://i.pinimg.com/originals/74/7b/65/747b658ec4ce3c9e7e6eaf9088c982a3.jpg" alt="image">
+  <div id="fullpage">
+    <div class="section one">
+      <h1>
+        Hello. My name is
+      </h1>
+      <h2>
+        Ian Hazelton.
+      </h2>
+    </div>
+    <div class="section two">
+      <h1>
+        I like to make
+      </h1>
+      <h2>
+        cool webby stuff
+      </h2>
+    </div>
+    <div class="section three">
+      <h1>
+        Like this
+      </h1>
+      <h2>
+        full-page slider
+      </h2>
+    </div>
   </div>
-  <div class="card position2" id="card2">
-    <img src="https://th.bing.com/th/id/OIP.0MTLRn5Hx7S0ALF8dABRgQHaHa?pid=Api&rs=1" alt="image">
-  </div>
-  <div class="card position3" id="card3">
-    <img src="https://th.bing.com/th/id/OIP.Cqln60J_AkI-3hhCFlvQxAHaHa?pid=Api&rs=1" alt="image">
-  </div>
-  <div class="card position4" id="card4">
-    <img src="https://i.pinimg.com/originals/2a/d3/26/2ad32645c4a1971498fcd08276ee8e34.jpg" alt="image">
-  </div>
-  <div class="card position5" id="card5">
-    <img src="https://66.media.tumblr.com/99287015d5ce743b84da4c5c3c28305f/tumblr_pg4s9qQcmX1w2ad4p_540.jpg" alt="image">
-  </div>
-</div>
+
+
 <script>
-const cards = document.querySelectorAll(".card");
-    const [prev, next] = document.querySelectorAll("i");
-    
-    const counter = (card) => {
-      switch (true) {
-        case card.className === "card position1":
-          return 1;
-        case card.className === "card position2":
-          return 2;
-        case card.className === "card position3":
-          return 3;
-        case card.className === "card position4":
-          return 4;
-        default:
-          return 5;
-      }
-    };
-    
-    const maxPosition = (card) => {
-      if (counter(card) === 5) {
-        return 1;
-      }
-      return counter(card) + 1;
-    };
-    
-    const minPosition = (card) => {
-      if (counter(card) === 1) {
-        return 5;
-      }
-      return counter(card) - 1;
-    };
-    
-    next.addEventListener("click", () => {
-      for (let card of cards) {
-        card.classList.replace(
-          `position${counter(card)}`,
-          `position${maxPosition(card)}`
-        );
-      }
-    });
-    
-    prev.addEventListener("click", () => {
-      for (let card of cards) {
-        card.classList.replace(
-          `position${counter(card)}`,
-          `position${minPosition(card)}`
-        );
-      }
-    });
-    </script>
+(function() {
+  $('#fullpage').fullpage();
+})();
+</script>
 </body>
 </html>

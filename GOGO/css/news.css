@@ -100,6 +100,7 @@ a.log > img.logo {
 }
 
 div.title {
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -115,15 +116,15 @@ div.title img {
 
 @keyframes scale {
   0% {
-    transform: scale(1);
+    transform: scale(0.6);
   }
 
   50% {
-    transform: scale(1.05, 1.05);
+    transform: scale(0.8, 0.8);
   }
 
   100% {
-    transform: scale(1.1);
+    transform: scale(1);
   }
 }
 
@@ -139,6 +140,13 @@ div.pack {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+  div.pack {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 div.pack img {
@@ -157,6 +165,12 @@ div.package2 {
   justify-content: center;
   align-items: center;
   margin-right: 100px;
+}
+
+@media screen and (max-width: 767px) {
+  div.package2 {
+    margin-right: 0px;
+  }
 }
 
 div.package2 img {
@@ -218,6 +232,13 @@ div.pack2 {
   margin-top: 50px;
 }
 
+@media screen and (max-width: 767px) {
+  div.pack2 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 div.pack2 img {
   transition: all 0.5s ease-out;
 }
@@ -234,6 +255,12 @@ div.package4 {
   justify-content: flex-start;
   align-items: flex-start;
   margin-right: 100px;
+}
+
+@media screen and (max-width: 767px) {
+  div.package4 {
+    margin-right: 0px;
+  }
 }
 
 div.package4 img {
@@ -316,9 +343,16 @@ a img.show:hover {
 
 div.package1 {
   display: flex;
-  flex-direction: ;
+  flex-direction: row;
   justify-content: center;
   margin-bottom: 50px;
+}
+
+@media screen and (max-width: 767px) {
+  div.package1 {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 div.pp1 a {
@@ -359,30 +393,11 @@ h1.t2 {
 div.bt {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
   padding-top: 50px;
   margin-bottom: 50px;
   width: 95%;
   margin: 0 auto;
-}
-
-div.bt #bt1 {
-  font-size: 20px;
-  padding: 20px;
-  list-style: none;
-  border: 1px solid black;
-  cursor: pointer;
-  background-color: white;
-  transition: all 1s ease-in-out;
-  margin: 0 auto;
-}
-
-div.bt #bt1:hover {
-  border: 1px solid gray;
-  background-color: black;
-  color: white;
-  transform: scale(1.2);
 }
 
 a > i {
