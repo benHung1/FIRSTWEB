@@ -83,6 +83,9 @@ $(function() {
     $( "#datepicker-14" ).datepicker();
  });
 
+
+ 
+
  $(function(){
   
     // 點擊按鈕，選單縮放
@@ -91,3 +94,6 @@ $(function() {
     });
     
   });
+
+
+  
