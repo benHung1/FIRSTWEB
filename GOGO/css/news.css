@@ -401,8 +401,19 @@ div.bt {
 }
 
 a > i {
-  font-size: 4rem;
+  font-size: 3rem;
   color: white;
+  animation: dance 1s infinite;
+}
+
+@keyframes dance {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-50px);
+  }
 }
 
 footer {
@@ -422,7 +433,6 @@ p.si {
   border-top: 2px solid gray;
   padding-top: 20px;
   margin-top: 20px;
-
   color: pink;
   font-size: 1.2rem;
 }

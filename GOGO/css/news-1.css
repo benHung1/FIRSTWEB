@@ -168,3 +168,24 @@ p.si {
   color: pink;
   font-size: 1.2rem;
 }
+
+a.bt-top {
+  margin-left: auto;
+  margin-right: 5%;
+}
+
+a > i {
+  font-size: 3rem;
+  color: white;
+  animation: dance 1s infinite;
+}
+
+@keyframes dance {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-50px);
+  }
+}
