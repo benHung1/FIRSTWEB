@@ -255,11 +255,9 @@ div.mid h1 {
 }
 
 div.con1 {
-  /* border: 1px solid pink; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /* width: 1200px; */
   margin: 0 auto;
 }
 
@@ -305,11 +303,18 @@ article.card p {
   margin: 0;
 }
 
+div.sh {
+  width: 100%;
+  display: none;
+  flex-direction: row;
+}
+
 a.last {
   /* border: 1px solid red; */
   color: blue;
   text-decoration: none;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   margin: 0 auto;

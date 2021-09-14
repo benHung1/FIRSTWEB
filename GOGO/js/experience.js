@@ -94,3 +94,10 @@ $('.slider').each(function() {
     $("nav.nav").slideToggle();
 });
 });
+
+
+$('a.last').click(function() {
+  $('div.sh').slideToggle();
+});
+
+
