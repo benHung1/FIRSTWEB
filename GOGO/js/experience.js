@@ -100,4 +100,10 @@ $('a.last').click(function() {
   $('div.sh').slideToggle();
 });
 
+$('a.last').click(function() {
+  $('h1.more').fadeOut();
+  $('h1.less').fadeOut();
+});
+
+
 

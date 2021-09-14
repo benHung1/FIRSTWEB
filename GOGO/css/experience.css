@@ -305,20 +305,19 @@ article.card p {
 
 div.sh {
   width: 100%;
-  display: none;
+  display: flex;
   flex-direction: row;
 }
 
 a.last {
-  /* border: 1px solid red; */
+  width: 200px;
   color: blue;
   text-decoration: none;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  width: 95%;
 }
 
 a.last h1 {
@@ -330,6 +329,12 @@ a.last h1 {
 a > i {
   font-size: 4rem;
   color: white;
+}
+
+footer > a {
+  text-decoration: none;
+  align-self: flex-end;
+  margin-right: 5%;
 }
 
 footer {
