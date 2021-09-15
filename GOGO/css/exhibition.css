@@ -100,6 +100,7 @@ a.log > img.logo {
 }
 
 div.title-part1 {
+  text-align: center;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -255,6 +256,7 @@ div.grid > div:hover {
 }
 
 div.title-end {
+  text-align: center;
   display: flex;
   flex-direction: row;
   align-items: center;
