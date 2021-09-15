@@ -191,21 +191,19 @@ a.slide_btn {
 .previous_btn {
   background-color: black;
   border-radius: 50%;
-  bottom: 0;
   left: 100px;
   margin: auto;
   position: absolute;
-  top: 0;
+  top: 200px;
 }
 
 .next_btn {
   background-color: black;
   border-radius: 50%;
-  bottom: 0;
   margin: auto;
   position: absolute;
   right: 100px;
-  top: 0;
+  top: 200px;
 }
 
 .previous_btn,
