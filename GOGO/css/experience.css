@@ -267,8 +267,8 @@ article.card {
   overflow: hidden;
   margin: 0 auto;
   margin-bottom: 30px;
-  /* width: 500px; */
-  width: calc(100% / 4);
+  width: 500px;
+  /* width: calc(100% / 4); */
 }
 
 article.card a.img_block > img {
