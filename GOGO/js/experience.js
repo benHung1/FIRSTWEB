@@ -97,7 +97,7 @@ $('.slider').each(function() {
 
 
 $('a.last').click(function() {
-  $('div.sh').slideToggle();
+  $('article.sh').slideToggle();
 });
 
 $('a.last').click(function() {
