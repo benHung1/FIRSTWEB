@@ -228,9 +228,11 @@ a.slide_btn {
 
 @media only screen and (max-width: 767px) {
   .previous_btn {
+    top: 700px;
     left: 50px;
   }
   .next_btn {
+    top: 700px;
     right: 50px;
   }
 }
