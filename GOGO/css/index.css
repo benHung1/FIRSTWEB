@@ -701,9 +701,9 @@ div.t1 img {
   transition: all 0.5s ease-in-out;
 }
 
-div.t1 img:hover {
+/* div.t1 img:hover {
   transform: scale(1.1, 1.1) perspective(1200px) rotateY(25deg);
-}
+} */
 
 span h1.tit1 {
   color: white;
@@ -722,9 +722,9 @@ div.t2 img {
   transition: all 0.5s ease-in-out;
 }
 
-div.t2 img:hover {
+/* div.t2 img:hover {
   transform: scale(1.1, 1.1) perspective(1200px) rotateY(-25deg);
-}
+} */
 
 span h1.tit2 {
   color: white;
@@ -753,9 +753,9 @@ div.t3 img {
   transition: all 0.5s ease-in-out;
 }
 
-div.t3 img:hover {
+/* div.t3 img:hover {
   transform: scale(1.1, 1.1);
-}
+} */
 
 span h1.tit3 {
   color: white;
