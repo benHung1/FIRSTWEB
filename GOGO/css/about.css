@@ -196,11 +196,11 @@ section p {
 .demo a {
   position: absolute;
   bottom: 20px;
-  left: 50%;
+  left: 48.5%;
   z-index: 2;
   display: inline-block;
-  -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -48.5%);
+  transform: translate(0, -48.5%);
   color: #fff;
   font: normal 400 20px/1 "Josefin Sans", sans-serif;
   letter-spacing: 0.1em;
